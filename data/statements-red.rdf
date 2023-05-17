@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="https://saref.etsi.org/core/"
+	xmlns:pr="http://www.pr.com/raza#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:saref="https://saref.etsi.org/core/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:path="http://www.ontotext.com/path#"
+	xmlns:terms="http://purl.org/dc/terms/"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:iof-av="https://purl.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
+	xmlns:sensor-core="http://www.ontocommons.eu/test/sensor-core#"
+	xmlns:vann="http://purl.org/vocab/vann/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:Core="https://spec.industrialontologies.org/ontology/core/Core/"
+	xmlns:wgs="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:gn="http://www.geonames.org/ontology#"
+	xmlns:bfo="http://purl.obolibrary.org/obo/"
+	xmlns:iof-core="https://purl.industrialontologies.org/ontology/core/Core/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000199">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Objectproperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000222">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Objectproperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000224">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Objectproperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/TurningMilling">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/Lapping">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/RoundGrinding">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-01-30T04%3A44%3A00Z2012-01-30T05%3A42%3A00Z">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/Case%2012012-01-30T04%3A44%3A00Z2012-01-30T05%3A42%3A00Z">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://example.com/base/TurningMilling"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-01-30T04%3A44%3A00Z">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-01-30T05%3A42%3A00Z">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-02-13T23%3A00%3A00Z2012-02-14T00%3A15%3A00Z">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/Case%2012012-02-13T23%3A00%3A00Z2012-02-14T00%3A15%3A00Z">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://example.com/base/Lapping"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-02-13T23%3A00%3A00Z">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-02-14T00%3A15%3A00Z">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-02-14T12%3A37%3A00Z">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-02-14T12%3A37%3A00Z2012-02-14T14%3A27%3A00Z">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/Case%2012012-02-14T12%3A37%3A00Z2012-02-14T14%3A27%3A00Z">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://example.com/base/RoundGrinding"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-02-14T14%3A27%3A00Z">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/TurningMilling">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/Lapping">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/RoundGrinding">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-01-30T04%3A44%3A00Z">
+	<rdf:value rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2012-01-30T04:44:00Z</rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-01-30T05%3A42%3A00Z">
+	<rdf:value rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2012-01-30T05:42:00Z</rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-02-13T23%3A00%3A00Z">
+	<rdf:value rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2012-02-13T23:00:00Z</rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-02-14T00%3A15%3A00Z">
+	<rdf:value rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2012-02-14T00:15:00Z</rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-02-14T12%3A37%3A00Z">
+	<rdf:value rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2012-02-14T12:37:00Z</rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-02-14T14%3A27%3A00Z">
+	<rdf:value rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2012-02-14T14:27:00Z</rdf:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/Case%2012012-01-30T04%3A44%3A00Z2012-01-30T05%3A42%3A00Z">
+	<bfo:BFO_0000199 rdf:resource="http://example.com/base/2012-01-30T04%3A44%3A00Z2012-01-30T05%3A42%3A00Z"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/Case%2012012-02-13T23%3A00%3A00Z2012-02-14T00%3A15%3A00Z">
+	<bfo:BFO_0000199 rdf:resource="http://example.com/base/2012-02-13T23%3A00%3A00Z2012-02-14T00%3A15%3A00Z"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/Case%2012012-02-14T12%3A37%3A00Z2012-02-14T14%3A27%3A00Z">
+	<bfo:BFO_0000199 rdf:resource="http://example.com/base/2012-02-14T12%3A37%3A00Z2012-02-14T14%3A27%3A00Z"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-01-30T04%3A44%3A00Z2012-01-30T05%3A42%3A00Z">
+	<bfo:BFO_0000222 rdf:resource="http://example.com/base/2012-01-30T04%3A44%3A00Z"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-02-13T23%3A00%3A00Z2012-02-14T00%3A15%3A00Z">
+	<bfo:BFO_0000222 rdf:resource="http://example.com/base/2012-02-13T23%3A00%3A00Z"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-02-14T12%3A37%3A00Z2012-02-14T14%3A27%3A00Z">
+	<bfo:BFO_0000222 rdf:resource="http://example.com/base/2012-02-14T12%3A37%3A00Z"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-01-30T04%3A44%3A00Z2012-01-30T05%3A42%3A00Z">
+	<bfo:BFO_0000224 rdf:resource="http://example.com/base/2012-01-30T05%3A42%3A00Z"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-02-13T23%3A00%3A00Z2012-02-14T00%3A15%3A00Z">
+	<bfo:BFO_0000224 rdf:resource="http://example.com/base/2012-02-14T00%3A15%3A00Z"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://example.com/base/2012-02-14T12%3A37%3A00Z2012-02-14T14%3A27%3A00Z">
+	<bfo:BFO_0000224 rdf:resource="http://example.com/base/2012-02-14T14%3A27%3A00Z"/>
+</rdf:Description>
+
+</rdf:RDF>

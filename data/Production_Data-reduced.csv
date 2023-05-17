@@ -1,0 +1,4 @@
+﻿Case ID,Activity,Resource,Start Timestamp,Complete Timestamp,Span,Work Order  Qty,Part Desc.,Worker ID,Report Type,Qty Completed,Qty Rejected,Qty for MRB,Rework
+Case 1,TurningMilling,TurningAndMillingMachine,2012-01-30,2012-01-30,000:58,10,CableHead,ID4932,D,1,0,0,
+Case 1,Lapping,LappingMachine ,2012-02-14,2012-02-14,000:00,10,CableHead,ID4882,D,0,0,0,
+Case 1,RoundGrinding,RoundGrindingMachine,2012-02-14,2012-02-14,001:50,10,CableHead,ID4445,D,9,0,0,

@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/arkop/ontologies/2023/4/untitled-ontology-263#"
+     xml:base="http://www.semanticweb.org/arkop/ontologies/2023/4/untitled-ontology-263"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
+    <owl:Ontology rdf:about="https://spec.industrialontologies.org/rules/core/TemporalRelations01"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000199 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000199"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000221 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000221"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000224 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000224"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/before -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/before">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/before"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/containsOccurenceOf"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/before"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/finishedBy"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/before"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/meets"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/before"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/startedBy"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/before"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/starts"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/finishes"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/before"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/meets"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/before"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/meets"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/containsOccurenceOf"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/meets"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/meets"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/meets"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/overlaps"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/occursDuring"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/before"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/occursDuring"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/meets"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/overlaps"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/before"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/overlaps"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/meets"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/starts"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/before"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/containsOccurenceOf -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/containsOccurenceOf"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/finishedBy -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/finishedBy"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/finishes -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/finishes"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/isOverlappedBy -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/isOverlappedBy">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/isOverlappedBy"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/finishes"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/startedBy"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/finishes"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/meets -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/meets">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000199"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000224"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000221"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000199"/>
+            </rdf:Description>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000224"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000221"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/meets"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/startedBy"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/meets"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/starts"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/metBy -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/metBy">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/metBy"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/finishedBy"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/metBy"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/finishes"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/occursDuring -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/occursDuring">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/finishes"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/occursDuring"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/finishes"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/starts"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/occursDuring"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/finishes"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/occursDuring"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/starts"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/starts"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/finishes"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/overlaps -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/overlaps">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/overlaps"/>
+            <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/starts"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/startedBy -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/startedBy"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/starts -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/starts"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

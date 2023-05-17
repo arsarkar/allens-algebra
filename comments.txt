@@ -1,0 +1,50 @@
+overlaps(o,o') → Occurrent(o) ∧ Occurrent(o') ∧ ∃i,∃i',∃i''(TemporalInstant(i) ∧ TemporalInstant(i') ∧ TemporalInstant(i'') ∧ ((firstInstantOf(i,o') ∧ lastInstantOf(i',o) ∧ lastInstantOf(i'',o')) ∨ ∃t,∃t'(TemporalRegion(t) ∧ TemporalRegion(t') ∧ firstInstantOf(i,t') ∧ lastInstantOf(i',t) ∧ lastInstantOf(i'',t'))) ∧ precedes(i,i') ∧ precededBy(i'',i'))
+
+* Why TemporalRegion? Temporal Region is an occurrent. 
+* firstInstantOf is not held between occurrent and temporal instant
+* cannot related TemporalInstants by precedes, see below 
+
+(Elucidation) If o, o' are occurrents and t is the temporal extent of o and t' is the temporal extent of o' then o precedes o' means: either last instant of o is before first instant of o'  or last instant of o = first instant of o' and neither o nor o' are temporal instants
+
+o => ________i'
+o'=>     i_________i''
+
+?? precedes(i,i') ∧ precedes(i',i'') true
+But whats about the following case? here o starts o' not overlaps.
+
+o =>         _____i'
+o'=>        i_________i''
+
+I think we should also constaint the start time  precedes(i, i'') ∧ precedes (i', i''') 
+
+o => i________i'
+o'=>    i''_________i'''
+
+
+o  => ________
+o' =>    _________
+o''=>    _____________
+ok.
+
+	
+---------
+'before' and 'after' can be between two temporal instants
+---------
+meets(o,o') → Occurrent(o) ∧ Occurrent(o') ∧ ∃i(TemporalInstant(i) ∧ ((lastInstantOf(i,o) ∧ firstInstantOf(i,o')) ∨ ∃t,∃t'(TemporalRegion(t) ∧ TemporalRegion(t') ∧ TemporalInstant(i) ∧ lastInstantOf(i,t) ∧ firstInstantOf(i,t') ∧ occupiesTemporalRegion(o,t) ∧ occupiesTemporalRegion(o',t'))))
+
+o => ________i
+o'=>         i_________
+
+* firstInstantOf is not held between occurrent and temporal instant
+
+meets(o,o') → Occurrent(o) ∧ Occurrent(o') ∧ ¬TemporalInstant(o) ∧ ¬TemporalInstant(o') ∧ ∃t,∃t',∃i(TemporalRegion(t) ∧ TemporalRegion(t') ∧  occupiesTemporalRegion(o,t) ∧ occupiesTemporalRegion(o',t')  ∧ lastInstantOf(i,t) ∧ firstInstantOf(i,t'))
+---------
+starts and finishes -> occursDuring  --- ok! but multiple disjunction, check the inference
+
+o  =>     ________
+o' =>     _________
+o''=>  ____________
+
+
+  
+

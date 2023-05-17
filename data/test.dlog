@@ -1,0 +1,3 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/>.
+
+[?s, bfo:BFO_0000063, ?e] :- [?t, bfo:BFO_0000222, ?s], [?t, bfo:BFO_0000224, ?e].

@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/allen"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/allen">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.obolibrary.org/obo/bfo/iso/2020/bfo.owl</Import>
+    <Declaration>
+        <ObjectProperty IRI="#contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#during"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#equals"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#finishedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#finishes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#meets"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#metBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#overlappedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#overlaps"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#startedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#starts"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contains"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#during"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#equals"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#finishedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#finishes"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#meets"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#metBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#overlappedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#overlaps"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#startedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#starts"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#contains"/>
+        <ObjectProperty IRI="#during"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#finishedBy"/>
+        <ObjectProperty IRI="#finishes"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#meets"/>
+        <ObjectProperty IRI="#metBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#overlappedBy"/>
+        <ObjectProperty IRI="#overlaps"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#startedBy"/>
+        <ObjectProperty IRI="#starts"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#equals"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#equals"/>
+    </TransitiveObjectProperty>
+    <ReflexiveObjectProperty>
+        <ObjectProperty IRI="#equals"/>
+    </ReflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#during"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equals"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#finishedBy"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#finishes"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#meets"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#metBy"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#overlappedBy"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#overlaps"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#startedBy"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#starts"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#during"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equals"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#finishedBy"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#finishes"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#meets"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#metBy"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#overlappedBy"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#overlaps"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#startedBy"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#starts"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#contains</IRI>
+        <Literal>for all i, j overlaps(i,j) = TemporalRegion(i) &amp; TemporalRegion(j) &amp; exists t1, t2, t3, t4 firstInstantOf(t1, i) &amp; lastInstantOf(t2, i) &amp; firstInstantOf(t3, j) &amp; lastInstantOf(t4, j) &amp; precedes(t1, t3) &amp; precedes(t4, t2)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#contains</IRI>
+        <Literal>contains</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#contains</IRI>
+        <Literal>An interval i contains another interval j if i starts before j starts and finishes after j finishes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#equals</IRI>
+        <Literal>for all i, j overlaps(i,j) = TemporalRegion(i) &amp; TemporalRegion(j) &amp; exists t1, t2, t3, t4 firstInstantOf(t1, i) &amp; lastInstantOf(t2, i) &amp; firstInstantOf(t1, j) &amp; lastInstantOf(t2, j)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#equals</IRI>
+        <Literal>equals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#equals</IRI>
+        <Literal>An interval i equals another interval j if i starts at the same teporal instant j starts and finishes at the same temporal instant j finishes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#finishes</IRI>
+        <Literal>for all i, j starts(i,j) = TemporalRegion(i) &amp; TemporalRegion(j) &amp; exists t1, t2, t3 firstInstantOf(t1, i) &amp; lastInstantOf(t3,i) &amp; firstInstantOf(t2,j) &amp; lastInstantOf(t3,j) &amp; precedes(t2,t1)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#finishes</IRI>
+        <Literal>finishes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#finishes</IRI>
+        <Literal>An interval i finishes another interval j if i starts after j starts but finishes at the same temporal instant j finishes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#meets</IRI>
+        <Literal>for all i, j meets(i,j) = precedes(i,j) &amp; exists t (temporalInstant(t) &amp; lastInstantOf(t,i) &amp; firstInstantOf(t,j))</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#meets</IRI>
+        <Literal>meets</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#meets</IRI>
+        <Literal>An interval i meets another interval j if j starts at the same temporal instant i finishes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#overlaps</IRI>
+        <Literal>for all i, j overlaps(i,j) = TemporalRegion(i) &amp; TemporalRegion(j) &amp; exists t1, t2, t3, t4 firstInstantOf(t1, i) &amp; lastInstantOf(t2, i) &amp; firstInstantOf(t3, j) &amp; lastInstantOf(t4, j) &amp; precedes(t1, t3) &amp; precedes(t2, t4)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#overlaps</IRI>
+        <Literal>overlaps</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#overlaps</IRI>
+        <Literal>An interval i overlaps another interval j if i starts before j starts but finishes before j finishes and j starts before i finishes but finishes after i finishes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#starts</IRI>
+        <Literal>for all i, j starts(i,j) = TemporalRegion(i) &amp; TemporalRegion(j) &amp; exists t1, t2, t3 firstInstantOf(t1, i) &amp; lastInstantOf(t2,i) &amp; firstInstantOf(t1,j) &amp; lastInstantOf(t3,j) &amp; precedes(t2,t3)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#starts</IRI>
+        <Literal>starts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>#starts</IRI>
+        <Literal>An interval i starts another interval j if the i starts at the same temporal instant j starts but i finishes before j finishes.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

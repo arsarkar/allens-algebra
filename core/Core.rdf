@@ -1091,7 +1091,6 @@
 
     <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/occursSimoultaneouslyWith">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain>
             <owl:Class>
@@ -1369,7 +1368,6 @@
     <owl:DatatypeProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/hasDateTimeStampInXSDExpression">
         <rdfs:subPropertyOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
         <rdfs:label>has date-time stamp in XSD expression</rdfs:label>
         <iof-av:naturalLanguageDefinition xml:lang="en">data property that relates a time instance value to a XSD date-time stamp.</iof-av:naturalLanguageDefinition>
     </owl:DatatypeProperty>

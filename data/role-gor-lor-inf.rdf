@@ -1,0 +1,1204 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.com/base#"
+     xml:base="http://www.example.com/base"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Core="https://spec.industrialontologies.org/ontology/core/Core/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.example.com/base"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000056 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000056"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000057 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000057"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000108 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000108"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000167 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000167"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000194 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000194"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000195 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000195"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000196 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000196"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000197 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000197"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000199 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000199"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000221 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000221"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000222 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000222"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000223 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000223"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000224 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000224"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/describedBy -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/describedBy"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/describes -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/describes"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/finishedBy -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/finishedBy"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/finishes -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/finishes"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/hasInput -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/hasInput"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/hasOutput -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/hasOutput"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtSomeTime -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtSomeTime"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/isAbout -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/isAbout"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/isInputOf -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/isInputOf"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/isOutputOf -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/isOutputOf"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/isSubjectOf -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/isSubjectOf"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/isValueExpressionOfAtAllTimes -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/isValueExpressionOfAtAllTimes"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/isValueExpressionOfAtSomeTime -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/isValueExpressionOfAtSomeTime"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/startedBy -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/startedBy"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/starts -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/starts"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/hasDateTimeValue -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/hasDateTimeValue"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000001"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000038"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000148 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000148"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000202 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000202"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000203 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000203"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/Agent -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/core/Core/Agent"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/AgentRole -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/core/Core/AgentRole"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/DescriptiveInformationContentEntity -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/core/Core/DescriptiveInformationContentEntity"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/Event -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/core/Core/Event"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/GainOfRole -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/core/Core/GainOfRole"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/LossOfRole -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/core/Core/LossOfRole"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/ValueExpression -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/core/Core/ValueExpression"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/MaturityLevel -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/MaturityLevel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/base#incident1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#incident1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Event"/>
+        <obo:BFO_0000199 rdf:resource="http://www.example.com/base#incident1-int"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#incident1-int -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#incident1-int">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <obo:BFO_0000222 rdf:resource="http://www.example.com/base#I2016-05-28T03:24:00Z"/>
+        <obo:BFO_0000224 rdf:resource="http://www.example.com/base#I2016-05-28T03:26:00Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#incident2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#incident2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Event"/>
+        <obo:BFO_0000199 rdf:resource="http://www.example.com/base#I2016-05-28T16:05:00Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#incident3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#incident3">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Event"/>
+        <obo:BFO_0000199 rdf:resource="http://www.example.com/base#I2016-05-28T23:43:00Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op1-gor -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op1-gor">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/GainOfRole"/>
+        <obo:BFO_0000057 rdf:resource="http://www.example.com/base#operator1"/>
+        <obo:BFO_0000057 rdf:resource="http://www.example.com/base#role-of-operator1"/>
+        <obo:BFO_0000167 rdf:resource="http://www.example.com/base#operator1"/>
+        <obo:BFO_0000199 rdf:resource="http://www.example.com/base#op1-gor-int"/>
+        <Core:hasOutput rdf:resource="http://www.example.com/base#role-of-operator1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op1-gor-int -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op1-gor-int">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <obo:BFO_0000222 rdf:resource="http://www.example.com/base#I2016-05-28T00:03:00Z"/>
+        <obo:BFO_0000224 rdf:resource="http://www.example.com/base#I2016-05-28T00:10:00Z"/>
+        <Core:starts rdf:resource="http://www.example.com/base#op1-int"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op1-int -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op1-int">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <Core:finishedBy rdf:resource="http://www.example.com/base#op1-lor-int"/>
+        <Core:startedBy rdf:resource="http://www.example.com/base#op1-gor-int"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op1-lor -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op1-lor">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/LossOfRole"/>
+        <obo:BFO_0000057 rdf:resource="http://www.example.com/base#operator1"/>
+        <obo:BFO_0000057 rdf:resource="http://www.example.com/base#role-of-operator1"/>
+        <obo:BFO_0000167 rdf:resource="http://www.example.com/base#operator1"/>
+        <obo:BFO_0000199 rdf:resource="http://www.example.com/base#op1-lor-int"/>
+        <Core:hasInput rdf:resource="http://www.example.com/base#role-of-operator1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op1-lor-int -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op1-lor-int">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <obo:BFO_0000222 rdf:resource="http://www.example.com/base#I2016-05-28T07:58:00Z"/>
+        <obo:BFO_0000224 rdf:resource="http://www.example.com/base#I2016-05-28T08:07:00Z"/>
+        <Core:finishes rdf:resource="http://www.example.com/base#op1-int"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op2-gor -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op2-gor">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/GainOfRole"/>
+        <obo:BFO_0000057 rdf:resource="http://www.example.com/base#operator2"/>
+        <obo:BFO_0000057 rdf:resource="http://www.example.com/base#role-of-operator2"/>
+        <obo:BFO_0000167 rdf:resource="http://www.example.com/base#operator2"/>
+        <obo:BFO_0000199 rdf:resource="http://www.example.com/base#op2-gor-int"/>
+        <Core:hasOutput rdf:resource="http://www.example.com/base#role-of-operator2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op2-gor-int -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op2-gor-int">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <obo:BFO_0000222 rdf:resource="http://www.example.com/base#I2016-05-28T07:58:00Z"/>
+        <obo:BFO_0000224 rdf:resource="http://www.example.com/base#I2016-05-28T08:07:00Z"/>
+        <Core:starts rdf:resource="http://www.example.com/base#op2-int"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op2-int -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op2-int">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <Core:finishedBy rdf:resource="http://www.example.com/base#op2-lor-int"/>
+        <Core:startedBy rdf:resource="http://www.example.com/base#op2-gor-int"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op2-lor -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op2-lor">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/LossOfRole"/>
+        <obo:BFO_0000057 rdf:resource="http://www.example.com/base#operator2"/>
+        <obo:BFO_0000057 rdf:resource="http://www.example.com/base#role-of-operator2"/>
+        <obo:BFO_0000167 rdf:resource="http://www.example.com/base#operator2"/>
+        <obo:BFO_0000199 rdf:resource="http://www.example.com/base#op2-lor-int"/>
+        <Core:hasInput rdf:resource="http://www.example.com/base#role-of-operator2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op2-lor-int -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op2-lor-int">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <obo:BFO_0000222 rdf:resource="http://www.example.com/base#I2016-05-28T16:01:00Z"/>
+        <obo:BFO_0000224 rdf:resource="http://www.example.com/base#I2016-05-28T16:08:00Z"/>
+        <Core:finishes rdf:resource="http://www.example.com/base#op2-int"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op3-gor -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op3-gor">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/GainOfRole"/>
+        <obo:BFO_0000057 rdf:resource="http://www.example.com/base#operator3"/>
+        <obo:BFO_0000057 rdf:resource="http://www.example.com/base#role-of-operator3"/>
+        <obo:BFO_0000167 rdf:resource="http://www.example.com/base#operator3"/>
+        <obo:BFO_0000199 rdf:resource="http://www.example.com/base#op3-gor-int"/>
+        <Core:hasOutput rdf:resource="http://www.example.com/base#role-of-operator3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op3-gor-int -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op3-gor-int">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <obo:BFO_0000222 rdf:resource="http://www.example.com/base#I2016-05-28T16:01:00Z"/>
+        <obo:BFO_0000224 rdf:resource="http://www.example.com/base#I2016-05-28T16:08:00Z"/>
+        <Core:starts rdf:resource="http://www.example.com/base#op3-int"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op3-int -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op3-int">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <Core:finishedBy rdf:resource="http://www.example.com/base#op3-lor-int"/>
+        <Core:startedBy rdf:resource="http://www.example.com/base#op3-gor-int"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op3-lor -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op3-lor">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/LossOfRole"/>
+        <obo:BFO_0000057 rdf:resource="http://www.example.com/base#operator3"/>
+        <obo:BFO_0000057 rdf:resource="http://www.example.com/base#role-of-operator3"/>
+        <obo:BFO_0000167 rdf:resource="http://www.example.com/base#operator3"/>
+        <obo:BFO_0000199 rdf:resource="http://www.example.com/base#op3-lor-int"/>
+        <Core:hasInput rdf:resource="http://www.example.com/base#role-of-operator3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#op3-lor-int -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#op3-lor-int">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <obo:BFO_0000222 rdf:resource="http://www.example.com/base#I2016-05-29T00:01:00Z"/>
+        <Core:finishes rdf:resource="http://www.example.com/base#op3-int"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#operator1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#operator1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Agent"/>
+        <obo:BFO_0000056 rdf:resource="http://www.example.com/base#op1-gor"/>
+        <obo:BFO_0000056 rdf:resource="http://www.example.com/base#op1-lor"/>
+        <obo:BFO_0000194 rdf:resource="http://www.example.com/base#role-of-operator1"/>
+        <obo:BFO_0000196 rdf:resource="http://www.example.com/base#role-of-operator1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#operator2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#operator2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Agent"/>
+        <obo:BFO_0000056 rdf:resource="http://www.example.com/base#op2-gor"/>
+        <obo:BFO_0000056 rdf:resource="http://www.example.com/base#op2-lor"/>
+        <obo:BFO_0000194 rdf:resource="http://www.example.com/base#role-of-operator2"/>
+        <obo:BFO_0000196 rdf:resource="http://www.example.com/base#role-of-operator2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#operator3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#operator3">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Agent"/>
+        <obo:BFO_0000056 rdf:resource="http://www.example.com/base#op3-gor"/>
+        <obo:BFO_0000056 rdf:resource="http://www.example.com/base#op3-lor"/>
+        <obo:BFO_0000194 rdf:resource="http://www.example.com/base#role-of-operator3"/>
+        <obo:BFO_0000196 rdf:resource="http://www.example.com/base#role-of-operator3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#role-of-operator1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#role-of-operator1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/AgentRole"/>
+        <obo:BFO_0000056 rdf:resource="http://www.example.com/base#op1-gor"/>
+        <obo:BFO_0000056 rdf:resource="http://www.example.com/base#op1-lor"/>
+        <obo:BFO_0000108 rdf:resource="http://www.example.com/base#op1-int"/>
+        <obo:BFO_0000195 rdf:resource="http://www.example.com/base#operator1"/>
+        <obo:BFO_0000197 rdf:resource="http://www.example.com/base#operator1"/>
+        <Core:isInputOf rdf:resource="http://www.example.com/base#op1-lor"/>
+        <Core:isOutputOf rdf:resource="http://www.example.com/base#op1-gor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#role-of-operator2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#role-of-operator2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/AgentRole"/>
+        <obo:BFO_0000056 rdf:resource="http://www.example.com/base#op2-gor"/>
+        <obo:BFO_0000056 rdf:resource="http://www.example.com/base#op2-lor"/>
+        <obo:BFO_0000108 rdf:resource="http://www.example.com/base#op2-int"/>
+        <obo:BFO_0000195 rdf:resource="http://www.example.com/base#operator2"/>
+        <obo:BFO_0000197 rdf:resource="http://www.example.com/base#operator2"/>
+        <Core:isInputOf rdf:resource="http://www.example.com/base#op2-lor"/>
+        <Core:isOutputOf rdf:resource="http://www.example.com/base#op2-gor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#role-of-operator3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#role-of-operator3">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/AgentRole"/>
+        <obo:BFO_0000056 rdf:resource="http://www.example.com/base#op3-gor"/>
+        <obo:BFO_0000056 rdf:resource="http://www.example.com/base#op3-lor"/>
+        <obo:BFO_0000108 rdf:resource="http://www.example.com/base#op3-int"/>
+        <obo:BFO_0000195 rdf:resource="http://www.example.com/base#operator3"/>
+        <obo:BFO_0000197 rdf:resource="http://www.example.com/base#operator3"/>
+        <Core:isInputOf rdf:resource="http://www.example.com/base#op3-lor"/>
+        <Core:isOutputOf rdf:resource="http://www.example.com/base#op3-gor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#I2016-05-28T00:03:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#I2016-05-28T00:03:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000221 rdf:resource="http://www.example.com/base#op1-gor-int"/>
+        <Core:describedBy rdf:resource="http://www.example.com/base#TI2016-05-28T00:03:00Z"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://www.example.com/base#TI2016-05-28T00:03:00Z"/>
+        <Core:hasValueExpressionAtSomeTime rdf:resource="http://www.example.com/base#TI2016-05-28T00:03:00Z"/>
+        <Core:isSubjectOf rdf:resource="http://www.example.com/base#TI2016-05-28T00:03:00Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#I2016-05-28T00:10:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#I2016-05-28T00:10:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000223 rdf:resource="http://www.example.com/base#op1-gor-int"/>
+        <Core:describedBy rdf:resource="http://www.example.com/base#TI2016-05-28T00:10:00Z"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://www.example.com/base#TI2016-05-28T00:10:00Z"/>
+        <Core:hasValueExpressionAtSomeTime rdf:resource="http://www.example.com/base#TI2016-05-28T00:10:00Z"/>
+        <Core:isSubjectOf rdf:resource="http://www.example.com/base#TI2016-05-28T00:10:00Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#I2016-05-28T03:24:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#I2016-05-28T03:24:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000221 rdf:resource="http://www.example.com/base#incident1-int"/>
+        <Core:describedBy rdf:resource="http://www.example.com/base#TI2016-05-28T03:24:00Z"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://www.example.com/base#TI2016-05-28T03:24:00Z"/>
+        <Core:hasValueExpressionAtSomeTime rdf:resource="http://www.example.com/base#TI2016-05-28T03:24:00Z"/>
+        <Core:isSubjectOf rdf:resource="http://www.example.com/base#TI2016-05-28T03:24:00Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#I2016-05-28T03:26:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#I2016-05-28T03:26:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000223 rdf:resource="http://www.example.com/base#incident1-int"/>
+        <Core:describedBy rdf:resource="http://www.example.com/base#TI2016-05-28T03:26:00Z"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://www.example.com/base#TI2016-05-28T03:26:00Z"/>
+        <Core:hasValueExpressionAtSomeTime rdf:resource="http://www.example.com/base#TI2016-05-28T03:26:00Z"/>
+        <Core:isSubjectOf rdf:resource="http://www.example.com/base#TI2016-05-28T03:26:00Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#I2016-05-28T07:58:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#I2016-05-28T07:58:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000221 rdf:resource="http://www.example.com/base#op1-lor-int"/>
+        <obo:BFO_0000221 rdf:resource="http://www.example.com/base#op2-gor-int"/>
+        <Core:describedBy rdf:resource="http://www.example.com/base#TI2016-05-28T07:58:00Z"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://www.example.com/base#TI2016-05-28T07:58:00Z"/>
+        <Core:hasValueExpressionAtSomeTime rdf:resource="http://www.example.com/base#TI2016-05-28T07:58:00Z"/>
+        <Core:isSubjectOf rdf:resource="http://www.example.com/base#TI2016-05-28T07:58:00Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#I2016-05-28T08:07:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#I2016-05-28T08:07:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000223 rdf:resource="http://www.example.com/base#op1-lor-int"/>
+        <obo:BFO_0000223 rdf:resource="http://www.example.com/base#op2-gor-int"/>
+        <Core:describedBy rdf:resource="http://www.example.com/base#TI2016-05-28T08:07:00Z"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://www.example.com/base#TI2016-05-28T08:07:00Z"/>
+        <Core:hasValueExpressionAtSomeTime rdf:resource="http://www.example.com/base#TI2016-05-28T08:07:00Z"/>
+        <Core:isSubjectOf rdf:resource="http://www.example.com/base#TI2016-05-28T08:07:00Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#I2016-05-28T16:01:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#I2016-05-28T16:01:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000221 rdf:resource="http://www.example.com/base#op2-lor-int"/>
+        <obo:BFO_0000221 rdf:resource="http://www.example.com/base#op3-gor-int"/>
+        <Core:describedBy rdf:resource="http://www.example.com/base#TI2016-05-28T16:01:00Z"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://www.example.com/base#TI2016-05-28T16:01:00Z"/>
+        <Core:hasValueExpressionAtSomeTime rdf:resource="http://www.example.com/base#TI2016-05-28T16:01:00Z"/>
+        <Core:isSubjectOf rdf:resource="http://www.example.com/base#TI2016-05-28T16:01:00Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#I2016-05-28T16:05:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#I2016-05-28T16:05:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <Core:describedBy rdf:resource="http://www.example.com/base#TI2016-05-28T16:05:00Z"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://www.example.com/base#TI2016-05-28T16:05:00Z"/>
+        <Core:hasValueExpressionAtSomeTime rdf:resource="http://www.example.com/base#TI2016-05-28T16:05:00Z"/>
+        <Core:isSubjectOf rdf:resource="http://www.example.com/base#TI2016-05-28T16:05:00Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#I2016-05-28T16:08:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#I2016-05-28T16:08:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000223 rdf:resource="http://www.example.com/base#op2-lor-int"/>
+        <obo:BFO_0000223 rdf:resource="http://www.example.com/base#op3-gor-int"/>
+        <Core:describedBy rdf:resource="http://www.example.com/base#TI2016-05-28T16:08:00Z"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://www.example.com/base#TI2016-05-28T16:08:00Z"/>
+        <Core:hasValueExpressionAtSomeTime rdf:resource="http://www.example.com/base#TI2016-05-28T16:08:00Z"/>
+        <Core:isSubjectOf rdf:resource="http://www.example.com/base#TI2016-05-28T16:08:00Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#I2016-05-28T23:43:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#I2016-05-28T23:43:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <Core:describedBy rdf:resource="http://www.example.com/base#TI2016-05-28T23:43:00Z"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://www.example.com/base#TI2016-05-28T23:43:00Z"/>
+        <Core:hasValueExpressionAtSomeTime rdf:resource="http://www.example.com/base#TI2016-05-28T23:43:00Z"/>
+        <Core:isSubjectOf rdf:resource="http://www.example.com/base#TI2016-05-28T23:43:00Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#I2016-05-29T00:01:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#I2016-05-29T00:01:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000221 rdf:resource="http://www.example.com/base#op3-lor-int"/>
+        <Core:describedBy rdf:resource="http://www.example.com/base#TI2016-05-29T00:01:00Z"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://www.example.com/base#TI2016-05-29T00:01:00Z"/>
+        <Core:hasValueExpressionAtSomeTime rdf:resource="http://www.example.com/base#TI2016-05-29T00:01:00Z"/>
+        <Core:isSubjectOf rdf:resource="http://www.example.com/base#TI2016-05-29T00:01:00Z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#TI2016-05-28T00:03:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#TI2016-05-28T00:03:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DescriptiveInformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ValueExpression"/>
+        <Core:describes rdf:resource="http://www.example.com/base#I2016-05-28T00:03:00Z"/>
+        <Core:isAbout rdf:resource="http://www.example.com/base#I2016-05-28T00:03:00Z"/>
+        <Core:isValueExpressionOfAtAllTimes rdf:resource="http://www.example.com/base#I2016-05-28T00:03:00Z"/>
+        <Core:isValueExpressionOfAtSomeTime rdf:resource="http://www.example.com/base#I2016-05-28T00:03:00Z"/>
+        <Core:hasDateTimeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T00:03:00Z</Core:hasDateTimeValue>
+        <Core:hasSimpleExpressionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T00:03:00Z</Core:hasSimpleExpressionValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#TI2016-05-28T00:10:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#TI2016-05-28T00:10:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DescriptiveInformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ValueExpression"/>
+        <Core:describes rdf:resource="http://www.example.com/base#I2016-05-28T00:10:00Z"/>
+        <Core:isAbout rdf:resource="http://www.example.com/base#I2016-05-28T00:10:00Z"/>
+        <Core:isValueExpressionOfAtAllTimes rdf:resource="http://www.example.com/base#I2016-05-28T00:10:00Z"/>
+        <Core:isValueExpressionOfAtSomeTime rdf:resource="http://www.example.com/base#I2016-05-28T00:10:00Z"/>
+        <Core:hasDateTimeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T00:10:00Z</Core:hasDateTimeValue>
+        <Core:hasSimpleExpressionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T00:10:00Z</Core:hasSimpleExpressionValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#TI2016-05-28T03:24:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#TI2016-05-28T03:24:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DescriptiveInformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ValueExpression"/>
+        <Core:describes rdf:resource="http://www.example.com/base#I2016-05-28T03:24:00Z"/>
+        <Core:isAbout rdf:resource="http://www.example.com/base#I2016-05-28T03:24:00Z"/>
+        <Core:isValueExpressionOfAtAllTimes rdf:resource="http://www.example.com/base#I2016-05-28T03:24:00Z"/>
+        <Core:isValueExpressionOfAtSomeTime rdf:resource="http://www.example.com/base#I2016-05-28T03:24:00Z"/>
+        <Core:hasDateTimeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T03:24:00Z</Core:hasDateTimeValue>
+        <Core:hasSimpleExpressionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T03:24:00Z</Core:hasSimpleExpressionValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#TI2016-05-28T03:26:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#TI2016-05-28T03:26:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DescriptiveInformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ValueExpression"/>
+        <Core:describes rdf:resource="http://www.example.com/base#I2016-05-28T03:26:00Z"/>
+        <Core:isAbout rdf:resource="http://www.example.com/base#I2016-05-28T03:26:00Z"/>
+        <Core:isValueExpressionOfAtAllTimes rdf:resource="http://www.example.com/base#I2016-05-28T03:26:00Z"/>
+        <Core:isValueExpressionOfAtSomeTime rdf:resource="http://www.example.com/base#I2016-05-28T03:26:00Z"/>
+        <Core:hasDateTimeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T03:26:00Z</Core:hasDateTimeValue>
+        <Core:hasSimpleExpressionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T03:26:00Z</Core:hasSimpleExpressionValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#TI2016-05-28T07:58:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#TI2016-05-28T07:58:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DescriptiveInformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ValueExpression"/>
+        <Core:describes rdf:resource="http://www.example.com/base#I2016-05-28T07:58:00Z"/>
+        <Core:isAbout rdf:resource="http://www.example.com/base#I2016-05-28T07:58:00Z"/>
+        <Core:isValueExpressionOfAtAllTimes rdf:resource="http://www.example.com/base#I2016-05-28T07:58:00Z"/>
+        <Core:isValueExpressionOfAtSomeTime rdf:resource="http://www.example.com/base#I2016-05-28T07:58:00Z"/>
+        <Core:hasDateTimeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T07:58:00Z</Core:hasDateTimeValue>
+        <Core:hasSimpleExpressionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T07:58:00Z</Core:hasSimpleExpressionValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#TI2016-05-28T08:07:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#TI2016-05-28T08:07:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DescriptiveInformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ValueExpression"/>
+        <Core:describes rdf:resource="http://www.example.com/base#I2016-05-28T08:07:00Z"/>
+        <Core:isAbout rdf:resource="http://www.example.com/base#I2016-05-28T08:07:00Z"/>
+        <Core:isValueExpressionOfAtAllTimes rdf:resource="http://www.example.com/base#I2016-05-28T08:07:00Z"/>
+        <Core:isValueExpressionOfAtSomeTime rdf:resource="http://www.example.com/base#I2016-05-28T08:07:00Z"/>
+        <Core:hasDateTimeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T08:07:00Z</Core:hasDateTimeValue>
+        <Core:hasSimpleExpressionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T08:07:00Z</Core:hasSimpleExpressionValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#TI2016-05-28T16:01:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#TI2016-05-28T16:01:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DescriptiveInformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ValueExpression"/>
+        <Core:describes rdf:resource="http://www.example.com/base#I2016-05-28T16:01:00Z"/>
+        <Core:isAbout rdf:resource="http://www.example.com/base#I2016-05-28T16:01:00Z"/>
+        <Core:isValueExpressionOfAtAllTimes rdf:resource="http://www.example.com/base#I2016-05-28T16:01:00Z"/>
+        <Core:isValueExpressionOfAtSomeTime rdf:resource="http://www.example.com/base#I2016-05-28T16:01:00Z"/>
+        <Core:hasDateTimeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T16:01:00Z</Core:hasDateTimeValue>
+        <Core:hasSimpleExpressionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T16:01:00Z</Core:hasSimpleExpressionValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#TI2016-05-28T16:05:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#TI2016-05-28T16:05:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DescriptiveInformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ValueExpression"/>
+        <Core:describes rdf:resource="http://www.example.com/base#I2016-05-28T16:05:00Z"/>
+        <Core:isAbout rdf:resource="http://www.example.com/base#I2016-05-28T16:05:00Z"/>
+        <Core:isValueExpressionOfAtAllTimes rdf:resource="http://www.example.com/base#I2016-05-28T16:05:00Z"/>
+        <Core:isValueExpressionOfAtSomeTime rdf:resource="http://www.example.com/base#I2016-05-28T16:05:00Z"/>
+        <Core:hasDateTimeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T16:05:00Z</Core:hasDateTimeValue>
+        <Core:hasSimpleExpressionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T16:05:00Z</Core:hasSimpleExpressionValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#TI2016-05-28T16:08:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#TI2016-05-28T16:08:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DescriptiveInformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ValueExpression"/>
+        <Core:describes rdf:resource="http://www.example.com/base#I2016-05-28T16:08:00Z"/>
+        <Core:isAbout rdf:resource="http://www.example.com/base#I2016-05-28T16:08:00Z"/>
+        <Core:isValueExpressionOfAtAllTimes rdf:resource="http://www.example.com/base#I2016-05-28T16:08:00Z"/>
+        <Core:isValueExpressionOfAtSomeTime rdf:resource="http://www.example.com/base#I2016-05-28T16:08:00Z"/>
+        <Core:hasDateTimeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T16:08:00Z</Core:hasDateTimeValue>
+        <Core:hasSimpleExpressionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T16:08:00Z</Core:hasSimpleExpressionValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#TI2016-05-28T23:43:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#TI2016-05-28T23:43:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DescriptiveInformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ValueExpression"/>
+        <Core:describes rdf:resource="http://www.example.com/base#I2016-05-28T23:43:00Z"/>
+        <Core:isAbout rdf:resource="http://www.example.com/base#I2016-05-28T23:43:00Z"/>
+        <Core:isValueExpressionOfAtAllTimes rdf:resource="http://www.example.com/base#I2016-05-28T23:43:00Z"/>
+        <Core:isValueExpressionOfAtSomeTime rdf:resource="http://www.example.com/base#I2016-05-28T23:43:00Z"/>
+        <Core:hasDateTimeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T23:43:00Z</Core:hasDateTimeValue>
+        <Core:hasSimpleExpressionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-28T23:43:00Z</Core:hasSimpleExpressionValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/base#TI2016-05-29T00:01:00Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/base#TI2016-05-29T00:01:00Z">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DescriptiveInformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ValueExpression"/>
+        <Core:describes rdf:resource="http://www.example.com/base#I2016-05-29T00:01:00Z"/>
+        <Core:isAbout rdf:resource="http://www.example.com/base#I2016-05-29T00:01:00Z"/>
+        <Core:isValueExpressionOfAtAllTimes rdf:resource="http://www.example.com/base#I2016-05-29T00:01:00Z"/>
+        <Core:isValueExpressionOfAtSomeTime rdf:resource="http://www.example.com/base#I2016-05-29T00:01:00Z"/>
+        <Core:hasDateTimeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-29T00:01:00Z</Core:hasDateTimeValue>
+        <Core:hasSimpleExpressionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-29T00:01:00Z</Core:hasSimpleExpressionValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional -->
+
+    <owl:NamedIndividual rdf:about="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/MaturityLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released -->
+
+    <owl:NamedIndividual rdf:about="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/MaturityLevel"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

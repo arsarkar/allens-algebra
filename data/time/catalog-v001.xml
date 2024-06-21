@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://reference.data.gov.uk/def/intervals/" uri="interval_2010-03-08.n3"/>
+    <uri id="Imports Wizard Entry" name="http://www.w3.org/2006/time#2016" uri="time-purged.rdf"/>
+    <uri id="Imports Wizard Entry" name="https://spec.industrialontologies.org/ontology/202301/core/Core/" uri="file:/C:/Users/arkop/git/iofoundry/ontology-allens-algebra/core/Core.rdf"/>
+    <uri id="Imports Wizard Entry" name="https://spec.industrialontologies.org/ontology/core/commonstocoremapping/MappingOWLTimeToIOF/" uri="file:/C:/Users/arkop/git/iofoundry/ontology-allens-algebra/core/owltimetocoremapping/MappingTimeToIOF.rdf"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1692562008421" name="http://www.semanticweb.org/arkop/ontologies/2023/7/untitled-ontology-307" uri="time-example1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1692562008421" name="duplicate:http://www.w3.org/2006/time" uri="OWL-Time-examples.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1692562008421" name="duplicate:http://www.w3.org/2006/time" uri="time-purged.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1692562008421" name="duplicate:http://www.w3.org/2006/time" uri="time.rdf"/>
+    </group>
+</catalog>

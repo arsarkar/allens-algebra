@@ -1,0 +1,8 @@
+[?i, core:occursSimoultaneouslyWith, ?j] :- 
+[?i, rdf:type, bfo:BFO_0000203], 
+[?j, rdf:type, bfo:BFO_0000203],
+[?i, core:hasValueExpressionAtAllTimes, ?i1],
+[?j, core:hasValueExpressionAtAllTimes, ?j1],
+[?i1, core:hasDateTimeStampInXSDExpression, ?vi], 
+[?j1, core:hasDateTimeStampInXSDExpression, ?vj],
+FILTER ( ?vi = ?vj ) .

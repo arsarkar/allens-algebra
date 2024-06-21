@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://spec.industrialontologies.org/ontology/202301/core/Core/" uri="file:/C:/Users/arkop/git/iofoundry/ontology-allens-algebra/core/Core.rdf"/>
+    <uri id="Imports Wizard Entry" name="https://spec.industrialontologies.org/ontology/202301/core/Core/" uri="file:/C:/Users/arkop/git/iofoundry/ontology-allens-algebra/core/Core.rdf"/>
+    <uri id="Imports Wizard Entry" name="https://spec.industrialontologies.org/rules/core/TemporalRelations02" uri="file:/C:/Users/arkop/git/iofoundry/ontology-allens-algebra/core/rules/TemporalRelations02.rdf"/>
+    <uri id="Imports Wizard Entry" name="https://spec.industrialontologies.org/ontology/202301/core/Core/" uri="file:/C:/Users/arkop/git/iofoundry/ontology-allens-algebra/core/Core.rdf"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1692561988085" name="duplicate:http://example.com/base" uri="statements-red-inf1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1692561988085" name="duplicate:http://example.com/base" uri="statements-red-inf2.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1692561988085" name="duplicate:http://www.example.com/base" uri="role-gor-lor-inf.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1692561988085" name="duplicate:http://www.example.com/base" uri="role-gor-lor.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1692561988085" name="duplicate:http://www.example.com/base" uri="statements-red-inf.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1692561988085" name="duplicate:http://www.example.com/base" uri="statements-red-inf3.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1692561988085" name="http://www.semanticweb.org/arkop/ontologies/2023/7/untitled-ontology-307" uri="time/time-example1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1692561988085" name="duplicate:http://www.w3.org/2006/time" uri="time/OWL-Time-examples.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1692561988085" name="duplicate:http://www.w3.org/2006/time" uri="time/time-purged.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1692561988085" name="duplicate:http://www.w3.org/2006/time" uri="time/time.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1692561988085" name="duplicate:https://saref.etsi.org/core/" uri="prod-data.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1692561988085" name="duplicate:https://saref.etsi.org/core/" uri="statements-red-w-rule.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1692561988085" name="duplicate:https://saref.etsi.org/core/" uri="statements-red.rdf"/>
+    </group>
+</catalog>

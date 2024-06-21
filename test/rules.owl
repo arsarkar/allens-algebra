@@ -1,0 +1,69 @@
+Prefix: : <https://spec.industrialontologies.org/rules/core/TemporalRelations02#>
+Prefix: AnnotationVocabulary: <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/>
+Prefix: bfo: <http://purl.obolibrary.org/obo/>
+Prefix: core: <https://spec.industrialontologies.org/ontology/202301/core/Core/>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: swrl: <http://www.w3.org/2003/11/swrl#>
+Prefix: swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#>
+Prefix: swrlb: <http://www.w3.org/2003/11/swrlb#>
+Prefix: terms: <http://purl.org/dc/terms/>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <https://spec.industrialontologies.org/rules/core/TemporalRelations02>
+
+
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: swrla:isRuleEnabled
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:boolean
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: <https://spec.industrialontologies.org/ontology/core/Core/before>
+
+    
+ObjectProperty: <https://spec.industrialontologies.org/ontology/core/Core/isValueExpressionOfAtAllTimes>
+
+    
+ObjectProperty: bfo:BFO_0000063
+
+    
+ObjectProperty: bfo:BFO_0000222
+
+    
+ObjectProperty: bfo:BFO_0000224
+
+    
+DataProperty: <https://spec.industrialontologies.org/ontology/core/Core/hasDateTimeStampInXSDExpression>
+
+    
+Class: bfo:BFO_0000202
+
+    
+Class: bfo:BFO_0000203
+
+    
+Rule: 
+    bfo:BFO_0000202(?i), bfo:BFO_0000202(?j), bfo:BFO_0000224(?i, ?il), bfo:BFO_0000222(?j, ?jf), bfo:BFO_0000063(?il, ?jf) -> <https://spec.industrialontologies.org/ontology/core/Core/before>(?i, ?j)
+
+Rule: 
+    bfo:BFO_0000203(?<https://spec.industrialontologies.org/rules/core/TemporalRelations02#i>), bfo:BFO_0000203(?<https://spec.industrialontologies.org/rules/core/TemporalRelations02#j>), <https://spec.industrialontologies.org/ontology/core/Core/isValueExpressionOfAtAllTimes>(?<https://spec.industrialontologies.org/rules/core/TemporalRelations02#i1>, ?<https://spec.industrialontologies.org/rules/core/TemporalRelations02#i>), <https://spec.industrialontologies.org/ontology/core/Core/isValueExpressionOfAtAllTimes>(?<https://spec.industrialontologies.org/rules/core/TemporalRelations02#j1>, ?<https://spec.industrialontologies.org/rules/core/TemporalRelations02#j>), <https://spec.industrialontologies.org/ontology/core/Core/hasDateTimeStampInXSDExpression>(?<https://spec.industrialontologies.org/rules/core/TemporalRelations02#vi>, ?<https://spec.industrialontologies.org/rules/core/TemporalRelations02#i1>), <https://spec.industrialontologies.org/ontology/core/Core/hasDateTimeStampInXSDExpression>(?<https://spec.industrialontologies.org/rules/core/TemporalRelations02#vj>, ?<https://spec.industrialontologies.org/rules/core/TemporalRelations02#j1>), swrlb:lessThan(?<https://spec.industrialontologies.org/rules/core/TemporalRelations02#vi>, ?<https://spec.industrialontologies.org/rules/core/TemporalRelations02#vj>) -> bfo:BFO_0000063(?<https://spec.industrialontologies.org/rules/core/TemporalRelations02#i>, ?<https://spec.industrialontologies.org/rules/core/TemporalRelations02#j>)
+

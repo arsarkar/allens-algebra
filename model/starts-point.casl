@@ -1,0 +1,98 @@
+%% temporal instant specification
+spec temporal-instant =
+sort TemporalInstant
+pred __precedes__ : TemporalInstant * TemporalInstant
+forall x, y, z:TemporalInstant
+. not (x precedes x) %(instant_irreflexive)%
+. (x precedes y) /\ (y precedes z) => (x precedes z)  %(instant_transitive)%
+. (x precedes y) => not (y precedes x) %(instant_assymetric)% %implied
+then
+forall x, y:TemporalInstant
+. (x precedes y) \/ (y precedes x) \/ (x = y) %(instant_totally_ordered)%
+%%. (x precedes y) => not (x = y) %implied %%proven by irreflexive
+end
+
+%% temporal interval specification
+spec temporal-interval =
+temporal-instant
+then
+sort TemporalInterval
+pred __precedes__ : TemporalInterval * TemporalInterval
+forall x, y, z:TemporalInterval
+. not (x precedes x) %(interval_irreflexive)%
+. (x precedes y) /\ (y precedes z) => (x precedes z)  %(interval_transitive)%
+. (x precedes y) => not (y precedes x) %(interval_assymetric)% %implied
+then
+pred __hasFirstInstant__ : TemporalInterval * TemporalInstant
+pred __hasLastInstant__ : TemporalInterval * TemporalInstant
+forall x:TemporalInterval
+. exists y:TemporalInstant . (x hasFirstInstant y) %(interval_has_first)%
+. exists z:TemporalInstant . (x hasLastInstant z) %(interval_has_last)%
+end 
+
+%% temporal interval identity
+spec temporal-interval-identity =
+temporal-interval
+then
+forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
+. (x hasFirstInstant xf) /\ (x hasLastInstant xl) => (xf precedes xl) %(first_precedes_last)%
+. (x hasFirstInstant xf) /\ (x hasFirstInstant yf) => (xf=yf) %(unique_first_instant)%
+. (x hasLastInstant xl) /\ (x hasLastInstant yl) => (xl=yl) %(unique_last_instant)%
+. (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (xf = yf) /\ (xl = yl) => (x = y) %(same_interval)%
+. (x precedes y) => (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ ((xl precedes yf) \/ (xl=yf)) %(def_precedes)%
+end 
+
+%% temporal interval meets
+spec temporal-interval-meets =
+temporal-interval-identity
+then
+pred __meets__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
+. (x meets y) <=> (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (xl=yf) %(def_meets)%
+. (x meets y) => (x precedes y) %(precedes_subsumes_meets)% %implied
+end
+
+%% temporal interval before
+spec temporal-interval-before =
+temporal-interval-identity
+then
+pred __before__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
+. (x before y) <=> (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (xl precedes yf)  %(def_before)%
+. (x before y) => (x precedes y) %(precedes_subsumes_before)% %implied
+end
+
+%% covering axiom for precedes
+spec temporal-interval-precedes-cover
+= temporal-interval-meets and temporal-interval-before
+then
+forall x, y:TemporalInterval
+. (x precedes y) => (x meets y) \/ (x before y) %(precedes_cover)% %implied
+end
+
+%% Two interval meeting has no gaps between them
+spec temporal-interval-meets-alt =
+temporal-interval-identity
+then
+pred __meets__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval
+. (x meets y) => not exists z:TemporalInterval . (x precedes z) /\ (z precedes y) %(meets_no_gap)% %implied
+end
+
+%% definition of start based on time points
+spec temporal-interval-starts =
+temporal-interval-identity
+then
+pred __starts__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
+. (x starts y) <=> (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (xf = yf) /\ (xl precedes yl)  %(def_starts)%
+end
+
+%% point-free definition of start can be proven by the time-point definition
+spec temporal-interval-starts-pointfree =
+temporal-interval-meets and temporal-interval-before and temporal-interval-starts
+then
+pred __starts__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval
+. (x starts y) <=> exists z:TemporalInterval . (z meets x) /\ (z meets y) /\ exists z':TemporalInterval . (x before z') /\ (y meets z') %(starts-pointfree)% %implied
+end

@@ -127,8 +127,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.industrialontologies.org/test/Test1#ti1">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
-        <obo:BFO_0000063 rdf:resource="http://www.industrialontologies.org/test/Test1#ti2"/>
         <Core:hasValueExpressionAtAllTimes rdf:resource="http://www.industrialontologies.org/test/Test1#tive1"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://www.industrialontologies.org/test/Test1#ti2"/>
     </owl:NamedIndividual>
     
 

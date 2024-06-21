@@ -1,0 +1,435 @@
+@prefix : <http://www.w3.org/2006/time#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <http://example.org/time/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dgu: <http://reference.data.gov.uk/def/reference/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix scv: <http://purl.org/NET/scovo#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tzont: <http://www.w3.org/2006/timezone#> .
+@prefix interval: <http://reference.data.gov.uk/def/intervals/> .
+@base <http://example.org/time> .
+
+<http://example.org/time> rdf:type owl:Ontology ;
+                           owl:imports interval: ,
+                                       <http://reference.data.gov.uk/id/quarter/2006-Q1> ,
+                                       <http://www.w3.org/2006/time> ,
+                                       <http://www.w3.org/ns/dcat> ,
+                                       <https://spec.industrialontologies.org/ontology/202301/core/Core/> ,
+                                       <https://spec.industrialontologies.org/ontology/core/commonstocoremapping/MappingOWLTimeToIOF/> ;
+                           dgu:uriSet <http://reference.data.gov.uk/id/quarter> ;
+                           rdfs:comment "The first quarter of the British calendar year 2006"@en ;
+                           rdfs:label "British Quarter:2006-Q1"@en ;
+                           skos:prefLabel "British Quarter:2006-Q1"@en ;
+                           foaf:isPrimaryTopicOf <http://reference.data.gov.uk/doc/quarter/2006-Q1> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/accrualPeriodicity
+dct:accrualPeriodicity rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/language
+dct:language rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/spatial
+dct:spatial rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/temporal
+dct:temporal rdf:type owl:AnnotationProperty .
+
+
+###  http://reference.data.gov.uk/def/reference/uriSet
+dgu:uriSet rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/timezone#GMToffset
+tzont:GMToffset rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/timezone#name
+tzont:name rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/isPrimaryTopicOf
+foaf:isPrimaryTopicOf rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2006/time#Number
+:Number rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2006/time#genDay
+:genDay rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2006/time#genMonth
+:genMonth rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2006/time#genYear
+:genYear rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/time/validTime
+ex:validTime rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasTime .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/time/GPSTime
+ex:GPSTime rdf:type owl:Class ;
+           rdfs:subClassOf :GeneralDateTimeDescription ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTRS ;
+                             owl:hasValue <https://en.wikipedia.org/wiki/Global_Positioning_System#Timekeeping>
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :unitType ;
+                             owl:hasValue :unitSecond
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :dayOfWeek ;
+                             owl:cardinality "0"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :monthOfYear ;
+                             owl:cardinality "0"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :timeZone ;
+                             owl:cardinality "0"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :day ;
+                             owl:cardinality "0"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :dayOfYear ;
+                             owl:cardinality "0"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hour ;
+                             owl:cardinality "0"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :minute ;
+                             owl:cardinality "0"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :month ;
+                             owl:cardinality "0"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :second ;
+                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :week ;
+                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :year ;
+                             owl:cardinality "0"^^xsd:nonNegativeInteger
+                           ] ;
+           rdfs:comment "GPS Time is the number of seconds since an epoch in 1980, encoded as the number of weeks + seconds into the week" .
+
+
+###  http://example.org/time/UnixTime
+ex:UnixTime rdf:type owl:Class ;
+            rdfs:subClassOf :TimePosition ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasTRS ;
+                              owl:hasValue <http://dbpedia.org/resource/Unix_time>
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :numericPosition ;
+                              owl:allValuesFrom xsd:integer
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :nominalPosition ;
+                              owl:cardinality "0"^^xsd:nonNegativeInteger
+                            ] .
+
+
+###  http://www.w3.org/2006/timezone#TimeZone
+tzont:TimeZone rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/page/Coordinated_Universal_Time
+<http://dbpedia.org/page/Coordinated_Universal_Time> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Hebrew_calendar
+<http://dbpedia.org/resource/Hebrew_calendar> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Unix_time
+<http://dbpedia.org/resource/Unix_time> rdf:type owl:NamedIndividual .
+
+
+###  http://example.org/time/AbbyBirthday
+ex:AbbyBirthday rdf:type owl:NamedIndividual ,
+                         <http://purl.obolibrary.org/obo/BFO_0000203> ;
+                <https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes> ex:AbbyBirthdayGregorian ,
+                                                                                                        ex:AbbyBirthdayHebrew ,
+                                                                                                        ex:AbbyBirthdayUnix ,
+                                                                                                        <https://www.timeanddate.com/time/zones/AbbyBirthdayInDateTime> ;
+                rdfs:label "Abby's birthdate" .
+
+
+###  http://example.org/time/AbbyBirthdayGregorian
+ex:AbbyBirthdayGregorian rdf:type owl:NamedIndividual ,
+                                  :DateTimeDescription ;
+                         :dayOfWeek :Wednesday ;
+                         :monthOfYear <http://www.w3.org/ns/time-gregorian/May> ;
+                         :timeZone [ rdf:type tzont:TimeZone ;
+                                     tzont:GMToffset "+8" ;
+                                     tzont:name "AWST"
+                                   ] ;
+                         :unitType :unitMinute ;
+                         :day "---23"^^xsd:gDay ;
+                         :dayOfYear "143"^^xsd:nonNegativeInteger ;
+                         :hour "8"^^xsd:nonNegativeInteger ;
+                         :minute "20"^^xsd:nonNegativeInteger ;
+                         :month "--05"^^xsd:gMonth ;
+                         :year "2001"^^xsd:gYear .
+
+
+###  http://example.org/time/AbbyBirthdayHebrew
+ex:AbbyBirthdayHebrew rdf:type owl:NamedIndividual ,
+                               :GeneralDateTimeDescription ;
+                      :hasTRS <http://dbpedia.org/resource/Hebrew_calendar> ;
+                      :unitType :unitDay ;
+                      :day "---01"^^:genDay ;
+                      :month "--03"^^:genMonth ;
+                      :year "5761"^^:genYear .
+
+
+###  http://example.org/time/AbbyBirthdayUnix
+ex:AbbyBirthdayUnix rdf:type owl:NamedIndividual ,
+                             :TimePosition ;
+                    :hasTRS <http://dbpedia.org/resource/Unix_time> ;
+                    :numericPosition "990577200"^^:Number ;
+                    rdfs:label "Abby's birthdate in Unix time" .
+
+
+###  http://example.org/time/DatabaseTimeStamp
+ex:DatabaseTimeStamp rdf:type owl:NamedIndividual ,
+                              :Instant ;
+                     :inDateTime [ rdf:type ex:GPSTime ;
+                                   :second 64696.102 ;
+                                   :week "1834"^^xsd:nonNegativeInteger
+                                 ] ,
+                                 _:genid19 ;
+                     :inTimePosition [ rdf:type ex:UnixTime ;
+                                       :numericPosition 1446400696
+                                     ] ;
+                     :inXSDDateTimeStamp "2015-11-01T17:58:16.102Z"^^xsd:dateTimeStamp ;
+                     rdfs:comment "A database timestamp with lots of fractions in the seconds" .
+
+_:genid19 rdf:type :DateTimeDescription ;
+           :timeZone <http://dbpedia.org/page/Coordinated_Universal_Time> ;
+           :day "---01"^^xsd:gDay ;
+           :hour "17"^^xsd:nonNegativeInteger ;
+           :minute "58"^^xsd:nonNegativeInteger ;
+           :month "--11"^^xsd:gMonth ;
+           :second 16.102 ;
+           :year "2015"^^xsd:gYear .
+
+
+###  http://example.org/time/Microseconds
+ex:Microseconds rdf:type owl:NamedIndividual ,
+                         :TemporalEntity ;
+                :hasDuration _:genid21 ;
+                :hasDurationDescription [ rdf:type :DurationDescription ;
+                                          :seconds 0.00000037
+                                        ] ;
+                rdfs:comment "A temporal entity with duration 0.37 microseconds" .
+
+_:genid21 rdf:type :Duration ;
+           :unitType :unitSecond ;
+           :numericDuration 0.00000037 .
+
+
+###  http://example.org/time/Sivan
+ex:Sivan rdf:type owl:NamedIndividual ,
+                  :MonthOfYear ;
+         :unitType :unitMonth ;
+         :month "--03"^^xsd:gMonth ;
+         rdfs:label "Sivan"@en ;
+         skos:prefLabel "Sivan"@en ,
+                        "סִיוָן "@he .
+
+
+###  http://example.org/time/dataset-001
+ex:dataset-001 rdf:type owl:NamedIndividual ,
+                        dcat:Dataset ;
+               dcat:contactPoint <http://example.org/transparency-office/contact> ;
+               dcat:distribution :dataset-001-csv ;
+               dcat:keyword "accountability" ,
+                            "payments" ,
+                            "transparency" ;
+               dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-W> ;
+               dct:issued "2011-12-05"^^xsd:date ;
+               dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+               dct:modified "2011-12-05"^^xsd:date ;
+               dct:publisher :finance-ministry ;
+               dct:spatial <http://www.geonames.org/6695072> ;
+               dct:temporal <http://reference.data.gov.uk/id/quarter/2006-Q1> ;
+               dct:title "Imaginary dataset" .
+
+
+###  http://example.org/time/meetingStart
+ex:meetingStart rdf:type owl:NamedIndividual ,
+                         <http://purl.obolibrary.org/obo/BFO_0000203> ;
+                <https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes> ex:meetingStartDescription .
+
+
+###  http://example.org/time/meetingStartDescription
+ex:meetingStartDescription rdf:type owl:NamedIndividual ,
+                                    :DateTimeDescription ;
+                           :dayOfWeek :Sunday ;
+                           :monthOfYear <http://www.w3.org/ns/time-gregorian/January> ;
+                           :timeZone <https://www.timeanddate.com/time/zones/est> ;
+                           :unitType :unitMinute ;
+                           :day "---01"^^xsd:gDay ;
+                           :dayOfYear 1 ;
+                           :hour 10 ;
+                           :minute 30 ;
+                           :month "--01"^^xsd:gMonth ;
+                           :week 1 ;
+                           :year "2006"^^xsd:gYear ;
+                           <https://spec.industrialontologies.org/ontology/core/Core/hasDateTimeValue> "2006-01-01T10:30:00-05:00"^^xsd:dateTime .
+
+
+###  http://example.org/transparency-office/contact
+<http://example.org/transparency-office/contact> rdf:type owl:NamedIndividual .
+
+
+###  http://reference.data.gov.uk/def/intervals/one-quarter
+interval:one-quarter rdf:type :DurationDescription ;
+                     :hasXSDDuration "P3M"^^xsd:duration ;
+                     :months 3 ;
+                     rdfs:comment "A duration of one quarter, typically 3 months."@en ;
+                     rdfs:label "1 quarter of a year" .
+
+
+###  http://reference.data.gov.uk/id/gregorian-instant/2006-01-01T00:00:00
+<http://reference.data.gov.uk/id/gregorian-instant/2006-01-01T00:00:00> rdf:type owl:NamedIndividual .
+
+
+###  http://reference.data.gov.uk/id/gregorian-instant/2006-04-01T00:00:00
+<http://reference.data.gov.uk/id/gregorian-instant/2006-04-01T00:00:00> rdf:type owl:NamedIndividual .
+
+
+###  http://reference.data.gov.uk/id/gregorian-interval/2006-01-01T00:00:00/P3M
+<http://reference.data.gov.uk/id/gregorian-interval/2006-01-01T00:00:00/P3M> rdf:type owl:NamedIndividual .
+
+
+###  http://reference.data.gov.uk/id/half/2006-H1
+<http://reference.data.gov.uk/id/half/2006-H1> rdf:type owl:NamedIndividual .
+
+
+###  http://reference.data.gov.uk/id/month/2006-01
+<http://reference.data.gov.uk/id/month/2006-01> rdf:type owl:NamedIndividual .
+
+
+###  http://reference.data.gov.uk/id/month/2006-02
+<http://reference.data.gov.uk/id/month/2006-02> rdf:type owl:NamedIndividual .
+
+
+###  http://reference.data.gov.uk/id/month/2006-03
+<http://reference.data.gov.uk/id/month/2006-03> rdf:type owl:NamedIndividual .
+
+
+###  http://reference.data.gov.uk/id/quarter/2005-Q4
+<http://reference.data.gov.uk/id/quarter/2005-Q4> rdf:type owl:NamedIndividual .
+
+
+###  http://reference.data.gov.uk/id/quarter/2006-Q1
+<http://reference.data.gov.uk/id/quarter/2006-Q1> rdf:type owl:NamedIndividual ,
+                                                           :ProperInterval ;
+                                                  :hasBeginning <http://reference.data.gov.uk/id/gregorian-instant/2006-01-01T00:00:00> ,
+                                                                [ rdf:type :Instant ;
+                                                                  :inXSDDate "2006-01-01"^^xsd:date
+                                                                ] ;
+                                                  :hasDurationDescription interval:one-quarter ;
+                                                  :hasEnd <http://reference.data.gov.uk/id/gregorian-instant/2006-04-01T00:00:00> ,
+                                                          [ rdf:type :Instant ;
+                                                            :inXSDDate "2006-03-31"^^xsd:date
+                                                          ] ;
+                                                  :intervalContains <http://reference.data.gov.uk/id/month/2006-02> ;
+                                                  :intervalDuring <http://reference.data.gov.uk/id/half/2006-H1> ,
+                                                                  <http://reference.data.gov.uk/id/year/2006> ;
+                                                  :intervalEquals <http://reference.data.gov.uk/id/gregorian-interval/2006-01-01T00:00:00/P3M> ;
+                                                  :intervalFinishedBy <http://reference.data.gov.uk/id/month/2006-03> ;
+                                                  :intervalMeets <http://reference.data.gov.uk/id/quarter/2006-Q2> ;
+                                                  :intervalMetBy <http://reference.data.gov.uk/id/quarter/2005-Q4> ;
+                                                  :intervalStartedBy <http://reference.data.gov.uk/id/month/2006-01> ;
+                                                  interval:ordinalHalfOfYear 1 ;
+                                                  interval:ordinalQuarterOfYear 1 ;
+                                                  interval:ordinalYear 2006 ;
+                                                  :hasXSDDuration "P3M"^^xsd:duration .
+
+
+###  http://reference.data.gov.uk/id/quarter/2006-Q2
+<http://reference.data.gov.uk/id/quarter/2006-Q2> rdf:type owl:NamedIndividual .
+
+
+###  http://reference.data.gov.uk/id/year/2006
+<http://reference.data.gov.uk/id/year/2006> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#dataset-001-csv
+:dataset-001-csv rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/ns/time-gregorian/January
+<http://www.w3.org/ns/time-gregorian/January> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/ns/time-gregorian/May
+<http://www.w3.org/ns/time-gregorian/May> rdf:type owl:NamedIndividual .
+
+
+###  https://en.wikipedia.org/wiki/Global_Positioning_System#Timekeeping
+<https://en.wikipedia.org/wiki/Global_Positioning_System#Timekeeping> rdf:type owl:NamedIndividual .
+
+
+###  https://www.timeanddate.com/time/zones/AbbyBirthdayInDateTime
+<https://www.timeanddate.com/time/zones/AbbyBirthdayInDateTime> rdf:type owl:NamedIndividual ,
+                                                                         <https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression> ;
+                                                                <https://spec.industrialontologies.org/ontology/core/Core/hasDateTimeValue> "2001-05-23T08:20:00+08:00"^^xsd:dateTime .
+
+
+###  https://www.timeanddate.com/time/zones/est
+<https://www.timeanddate.com/time/zones/est> rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

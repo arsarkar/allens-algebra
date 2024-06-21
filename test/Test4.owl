@@ -1,0 +1,526 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Core="https://spec.industrialontologies.org/ontology/core/Core/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
+    <Ontology>
+        <imports rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/"/>
+        <imports rdf:resource="https://spec.industrialontologies.org/rules/core/TemporalRelations02"/>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000063 -->
+
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000063"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000199 -->
+
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000199"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000222 -->
+
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000222"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000224 -->
+
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000224"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes -->
+
+    <ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/occursSimoultaneouslyWith -->
+
+    <ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/occursSimoultaneouslyWith"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/hasDateTimeStampInXSDExpression -->
+
+    <DatatypeProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/hasDateTimeStampInXSDExpression"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression -->
+
+    <Class rdf:about="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/base/ete_p1 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/ete_p1">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <Core:hasDateTimeStampInXSDExpression rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-04-20T13:20:00Z</Core:hasDateTimeStampInXSDExpression>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/ete_p2 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/ete_p2">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <Core:hasDateTimeStampInXSDExpression rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-04-24T13:20:00Z</Core:hasDateTimeStampInXSDExpression>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/ete_p3 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/ete_p3">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <Core:hasDateTimeStampInXSDExpression rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-04-24T13:20:00Z</Core:hasDateTimeStampInXSDExpression>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/ete_p4 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/ete_p4">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <Core:hasDateTimeStampInXSDExpression rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-04-16T13:20:00Z</Core:hasDateTimeStampInXSDExpression>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/ete_p5 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/ete_p5">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <Core:hasDateTimeStampInXSDExpression rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-04-22T13:20:00Z</Core:hasDateTimeStampInXSDExpression>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/ete_p6 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/ete_p6">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <Core:hasDateTimeStampInXSDExpression rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-04-24T13:20:00Z</Core:hasDateTimeStampInXSDExpression>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/eti_p1 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/eti_p1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p2"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p3"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p5"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p6"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.com/base/ete_p1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/eti_p2 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/eti_p2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.com/base/ete_p2"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://example.com/base/eti_p3"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://example.com/base/eti_p6"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/eti_p3 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/eti_p3">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.com/base/ete_p3"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://example.com/base/eti_p2"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://example.com/base/eti_p6"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/eti_p4 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/eti_p4">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p1"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p2"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p3"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p5"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p6"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/sti_p5"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.com/base/ete_p4"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://example.com/base/sti_p2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/eti_p5 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/eti_p5">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p2"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p3"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p6"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.com/base/ete_p5"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/eti_p6 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/eti_p6">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.com/base/ete_p6"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://example.com/base/eti_p2"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://example.com/base/eti_p3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/p1 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/p1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <obo:BFO_0000199 rdf:resource="http://example.com/base/tr_p1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/p2 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/p2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <obo:BFO_0000199 rdf:resource="http://example.com/base/tr_p2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/p3 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/p3">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <obo:BFO_0000199 rdf:resource="http://example.com/base/tr_p3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/p4 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/p4">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <obo:BFO_0000199 rdf:resource="http://example.com/base/tr_p4"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/p5 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/p5">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <obo:BFO_0000199 rdf:resource="http://example.com/base/tr_p5"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/p6 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/p6">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <obo:BFO_0000199 rdf:resource="http://example.com/base/tr_p6"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/ste_p1 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/ste_p1">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <Core:hasDateTimeStampInXSDExpression rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-04-12T13:20:00Z</Core:hasDateTimeStampInXSDExpression>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/ste_p2 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/ste_p2">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <Core:hasDateTimeStampInXSDExpression rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-04-16T13:20:00Z</Core:hasDateTimeStampInXSDExpression>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/ste_p3 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/ste_p3">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <Core:hasDateTimeStampInXSDExpression rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-04-12T13:20:00Z</Core:hasDateTimeStampInXSDExpression>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/ste_p4 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/ste_p4">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <Core:hasDateTimeStampInXSDExpression rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-04-14T13:20:00Z</Core:hasDateTimeStampInXSDExpression>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/ste_p5 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/ste_p5">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <Core:hasDateTimeStampInXSDExpression rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-04-18T13:20:00Z</Core:hasDateTimeStampInXSDExpression>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/ste_p6 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/ste_p6">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <Core:hasDateTimeStampInXSDExpression rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-04-12T13:20:00Z</Core:hasDateTimeStampInXSDExpression>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/sti_p1 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/sti_p1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p1"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p2"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p3"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p4"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p5"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p6"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/sti_p2"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/sti_p4"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/sti_p5"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.com/base/ste_p1"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://example.com/base/sti_p3"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://example.com/base/sti_p6"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/sti_p2 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/sti_p2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p1"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p2"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p3"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p5"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p6"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/sti_p5"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.com/base/ste_p2"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://example.com/base/eti_p4"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/sti_p3 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/sti_p3">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p1"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p2"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p3"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p4"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p5"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p6"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/sti_p2"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/sti_p4"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/sti_p5"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.com/base/ste_p3"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://example.com/base/sti_p1"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://example.com/base/sti_p6"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/sti_p4 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/sti_p4">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p1"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p2"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p3"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p4"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p5"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p6"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/sti_p2"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/sti_p5"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.com/base/ste_p4"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/sti_p5 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/sti_p5">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p1"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p2"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p3"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p5"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p6"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.com/base/ste_p5"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/sti_p6 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/sti_p6">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p1"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p2"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p3"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p4"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p5"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/eti_p6"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/sti_p2"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/sti_p4"/>
+        <obo:BFO_0000063 rdf:resource="http://example.com/base/sti_p5"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.com/base/ste_p6"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://example.com/base/sti_p1"/>
+        <Core:occursSimoultaneouslyWith rdf:resource="http://example.com/base/sti_p3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/tr_p1 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/tr_p1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <obo:BFO_0000222 rdf:resource="http://example.com/base/sti_p1"/>
+        <obo:BFO_0000224 rdf:resource="http://example.com/base/eti_p1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/tr_p2 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/tr_p2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <obo:BFO_0000222 rdf:resource="http://example.com/base/sti_p2"/>
+        <obo:BFO_0000224 rdf:resource="http://example.com/base/eti_p2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/tr_p3 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/tr_p3">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <obo:BFO_0000222 rdf:resource="http://example.com/base/sti_p3"/>
+        <obo:BFO_0000224 rdf:resource="http://example.com/base/eti_p3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/tr_p4 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/tr_p4">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <obo:BFO_0000222 rdf:resource="http://example.com/base/sti_p4"/>
+        <obo:BFO_0000224 rdf:resource="http://example.com/base/eti_p4"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/tr_p5 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/tr_p5">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <obo:BFO_0000222 rdf:resource="http://example.com/base/sti_p5"/>
+        <obo:BFO_0000224 rdf:resource="http://example.com/base/eti_p5"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/base/tr_p6 -->
+
+    <NamedIndividual rdf:about="http://example.com/base/tr_p6">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <obo:BFO_0000222 rdf:resource="http://example.com/base/sti_p6"/>
+        <obo:BFO_0000224 rdf:resource="http://example.com/base/eti_p6"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,228 @@
+%% temporal instant specification
+spec temporal-instant =
+sort TemporalInstant
+pred __precedes__ : TemporalInstant * TemporalInstant
+forall x, y, z:TemporalInstant
+. not (x precedes x) %(instant_irreflexive)%
+. (x precedes y) /\ (y precedes z) => (x precedes z)  %(instant_transitive)%
+. (x precedes y) => not (y precedes x) %(instant_assymetric)% %implied
+then
+forall x, y:TemporalInstant
+. (x precedes y) \/ (y precedes x) \/ (x = y) %(instant_totally_ordered)%
+%%. (x precedes y) => not (x = y) %implied %%proven by irreflexive
+end
+
+%% temporal interval specification
+spec temporal-interval =
+temporal-instant
+then
+sort TemporalInterval
+pred __precedes__ : TemporalInterval * TemporalInterval
+forall x, y, z:TemporalInterval
+. not (x precedes x) %(interval_irreflexive)%
+. (x precedes y) /\ (y precedes z) => (x precedes z)  %(interval_transitive)%
+. (x precedes y) => not (y precedes x) %(interval_assymetric)% %implied
+then
+pred __hasFirstInstant__ : TemporalInterval * TemporalInstant
+pred __hasLastInstant__ : TemporalInterval * TemporalInstant
+forall x:TemporalInterval
+. exists y:TemporalInstant . (x hasFirstInstant y) %(interval_has_first)%
+. exists z:TemporalInstant . (x hasLastInstant z) %(interval_has_last)%
+end 
+
+%% temporal interval identity
+spec temporal-interval-identity =
+temporal-interval
+then
+forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
+. (x hasFirstInstant xf) /\ (x hasLastInstant xl) => (xf precedes xl) %(first_precedes_last)%
+. (x hasFirstInstant xf) /\ (x hasFirstInstant yf) => (xf=yf) %(unique_first_instant)%
+. (x hasLastInstant xl) /\ (x hasLastInstant yl) => (xl=yl) %(unique_last_instant)%
+. (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (xf = yf) /\ (xl = yl) => (x = y) %(same_interval)%
+. (x precedes y) => (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ ((xl precedes yf) \/ (xl=yf)) %(def_precedes)%
+end 
+
+%% temporal interval meets
+spec temporal-interval-meets =
+temporal-interval-identity
+then
+pred __meets__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
+. (x meets y) <=> (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (xl=yf) %(def_meets)%
+. (x meets y) => (x precedes y) %(precedes_subsumes_meets)% %implied
+end
+
+%% temporal interval before
+spec temporal-interval-before =
+temporal-interval-identity
+then
+pred __before__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
+. (x before y) <=> (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (xl precedes yf)  %(def_before)%
+. (x before y) => (x precedes y) %(precedes_subsumes_before)% %implied
+end
+
+%% covering axiom for precedes
+spec temporal-interval-precedes-cover
+= temporal-interval-meets and temporal-interval-before
+then
+forall x, y:TemporalInterval
+. (x precedes y) => (x meets y) \/ (x before y) %(precedes_cover)% %implied
+end
+
+%% Two interval meeting has no gaps between them
+spec temporal-interval-meets-alt =
+temporal-interval-identity
+then
+pred __meets__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval
+. (x meets y) => not exists z:TemporalInterval . (x precedes z) /\ (z precedes y) %(meets_no_gap)% %implied
+end
+
+%% process specification
+spec process =
+temporal-interval-identity
+then
+sort process
+pred __occupies__ : process * TemporalInterval
+forall p:process
+. exists x:TemporalInterval . (p occupies x) %(def_occupies)%
+end
+
+%% process occupies unique interval
+spec process-unique-interval =
+process
+then
+forall p:process; x, x':TemporalInterval
+. (p occupies x) /\ (x = x') => not (p occupies x') %(unique-occupation)%
+end
+
+%% definition process meets
+spec process-meets =
+process-unique-interval and temporal-interval-meets
+then
+pred __meets__ : process * process
+forall p, p':process; x, x':TemporalInterval
+.  (p meets p') <=> (p occupies x) /\ (p' occupies x') /\ (x meets x') %(process-meets)% %implied
+end
+
+%% definition of start based on time points
+spec temporal-interval-starts =
+temporal-interval-identity
+then
+pred __starts__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
+. (x starts y) <=> (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (xf = yf) /\ (xl precedes yl)  %(def_starts)%
+end
+
+%% point-free definition of start can be proven by the time-point definition
+spec temporal-interval-starts-pointfree =
+temporal-interval-meets and temporal-interval-before and temporal-interval-starts
+then
+pred __starts__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval
+. (x starts y) <=> exists z:TemporalInterval . (z meets x) /\ (z meets y) /\ exists z':TemporalInterval . (x before z') /\ (y meets z') %(starts-pointfree)% %implied
+end
+
+%% definition process starts
+spec process-starts =
+process-unique-interval and temporal-interval-starts
+then
+pred __starts__ : process * process
+forall p, p':process; x, x':TemporalInterval
+.  (p starts p') <=> (p occupies x) /\ (p' occupies x') /\ (x starts x') %(process-starts)% %implied
+end
+
+%% definition of finishes based on time points
+spec temporal-interval-finishes =
+temporal-interval-identity
+then
+pred __finishes__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
+. (x finishes y) <=> (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (xf precedes yf) /\ (xl = yl)  %(def_finishes)%
+end
+
+%% point-free definition of finishes can be proven by the time-point definition
+spec temporal-interval-finishes-pointfree =
+temporal-interval-meets and temporal-interval-before and temporal-interval-finishes
+then
+forall x, y:TemporalInterval
+. (x finishes y) <=> exists z:TemporalInterval . (z meets x) /\ (z before y) /\ exists z':TemporalInterval . (x meets z') /\ (y meets z') %(finishes-pointfree)% %implied
+end
+
+%% definition process finishes
+spec process-finishes =
+process-unique-interval and temporal-interval-finishes
+then
+pred __finishes__ : process * process
+forall p, p':process; x, x':TemporalInterval
+.  (p finishes p') <=> (p occupies x) /\ (p' occupies x') /\ (x finishes x') %(process-finishes)% %implied
+end
+
+%% definition of overlaps based on time points
+spec temporal-interval-overlaps =
+temporal-interval-identity
+then
+pred __overlaps__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
+. (x overlaps y) <=> (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (yf precedes xl) /\ (xf precedes yf) /\ (xl precedes yl)  %(def_overlaps)%
+end
+
+%% point-free definition of finishes can be proven by the time-point definition
+spec temporal-interval-overlaps-pointfree =
+temporal-interval-starts and temporal-interval-finishes and temporal-interval-overlaps
+then
+forall x, y:TemporalInterval
+. (x overlaps y) <=> exists z:TemporalInterval . (z finishes x) /\ (z starts y) %(overlaps-pointfree)% %implied
+end
+
+%% definition of during based on time points
+spec temporal-interval-during =
+temporal-interval-identity
+then
+pred __during__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
+. (x during y) <=> (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (yf precedes xf) /\ (xf precedes yf)  %(def_during)%
+end
+
+%% point-free definition of finishes can be proven by the time-point definition
+spec temporal-interval-overlaps-pointfree-alt =
+temporal-interval-during and temporal-interval-overlaps
+then
+forall x, y:TemporalInterval
+. (x overlaps y) <=> exists z:TemporalInterval . (z during x) /\ (z during y) %(overlaps-pointfree-alt)% %implied
+end
+
+%% definition process overlaps
+spec process-overlaps =
+process-unique-interval and temporal-interval-overlaps
+then
+pred __overlaps__ : process * process
+forall p, p':process; x, x':TemporalInterval
+.  (p overlaps p') <=> (p occupies x) /\ (p' occupies x') /\ (x overlaps x') %(process-overlaps)% %implied
+end
+
+%% point-free definition of during can be proven by the time-point definition
+spec temporal-interval-during-pointfree =
+temporal-interval-starts and temporal-interval-finishes and temporal-interval-during
+then
+forall x, y:TemporalInterval
+. (x during y) <=> exists z:TemporalInterval . (x finishes z) /\ (z starts y) %(during-pointfree)% %implied
+end
+
+%% point-free definition of during can be proven by the time-point definition
+spec temporal-interval-during-pointfree-alt =
+temporal-interval-starts and temporal-interval-finishes and temporal-interval-meets and temporal-interval-during 
+then
+forall x, y:TemporalInterval
+. (x during y) <=> exists z:TemporalInterval . (z meets x) /\ (z starts y) /\ exists z':TemporalInterval . (x meets z') /\ (z' finishes y)   %(during-pointfree-alt)% %implied
+end
+
+%% definition process during
+spec process-during =
+process-unique-interval and temporal-interval-during
+then
+pred __during__ : process * process
+forall p, p':process; x, x':TemporalInterval
+.  (p during p') <=> (p occupies x) /\ (p' occupies x') /\ (x during x') %(process-during)% %implied
+end

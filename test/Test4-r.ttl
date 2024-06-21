@@ -1,0 +1,107 @@
+@prefix mapper: <http://www.ontotext.com/mapper/> .
+@prefix bfo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix core: <https://spec.industrialontologies.org/ontology/core/Core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+<http://example.com/base/p1> a owl:NamedIndividual, bfo:BFO_0000015;
+  bfo:BFO_0000199 <http://example.com/base/2023-04-12T13%3A20%3A00Z2023-04-20T13%3A20%3A00Z> .
+
+bfo:BFO_0000015 a owl:Class .
+
+bfo:BFO_0000199 a owl:ObjectProperty .
+
+<http://example.com/base/2023-04-12T13%3A20%3A00Z2023-04-20T13%3A20%3A00Z> a owl:NamedIndividual,
+    bfo:BFO_0000202;
+  bfo:BFO_0000222 <http://example.com/base/ti2023-04-12T13%3A20%3A00Z>;
+  bfo:BFO_0000224 <http://example.com/base/ti2023-04-20T13%3A20%3A00Z> .
+
+bfo:BFO_0000222 a owl:ObjectProperty .
+
+bfo:BFO_0000224 a owl:ObjectProperty .
+
+<http://example.com/base/ti2023-04-12T13%3A20%3A00Z> a owl:NamedIndividual, bfo:BFO_0000203;
+  core:hasValueExpressionAtAllTimes <http://example.com/base/te2023-04-12T13%3A20%3A00Z> .
+
+<http://example.com/base/ti2023-04-20T13%3A20%3A00Z> a owl:NamedIndividual, bfo:BFO_0000203;
+  core:hasValueExpressionAtAllTimes <http://example.com/base/te2023-04-20T13%3A20%3A00Z> .
+
+<http://example.com/base/te2023-04-12T13%3A20%3A00Z> a owl:NamedIndividual, core:TemporalInstantValueExpression;
+  core:hasDateTimeStampInXSDExpression "2023-04-12T13:20:00Z"^^xsd:dateTimeStamp .
+
+<http://example.com/base/te2023-04-20T13%3A20%3A00Z> a owl:NamedIndividual, core:TemporalInstantValueExpression;
+  core:hasDateTimeStampInXSDExpression "2023-04-20T13:20:00Z"^^xsd:dateTimeStamp .
+
+core:hasValueExpressionAtAllTimes a owl:ObjectProperty .
+
+core:hasDateTimeStampInXSDExpression a owl:DatatypeProperty .
+
+<http://example.com/base/p2> a owl:NamedIndividual, bfo:BFO_0000015;
+  bfo:BFO_0000199 <http://example.com/base/2023-04-16T13%3A20%3A00Z2023-04-24T13%3A20%3A00Z> .
+
+<http://example.com/base/2023-04-16T13%3A20%3A00Z2023-04-24T13%3A20%3A00Z> a owl:NamedIndividual,
+    bfo:BFO_0000202;
+  bfo:BFO_0000222 <http://example.com/base/ti2023-04-16T13%3A20%3A00Z>;
+  bfo:BFO_0000224 <http://example.com/base/ti2023-04-24T13%3A20%3A00Z> .
+
+<http://example.com/base/ti2023-04-16T13%3A20%3A00Z> a owl:NamedIndividual, bfo:BFO_0000203;
+  core:hasValueExpressionAtAllTimes <http://example.com/base/te2023-04-16T13%3A20%3A00Z> .
+
+<http://example.com/base/ti2023-04-24T13%3A20%3A00Z> a owl:NamedIndividual, bfo:BFO_0000203;
+  core:hasValueExpressionAtAllTimes <http://example.com/base/te2023-04-24T13%3A20%3A00Z> .
+
+<http://example.com/base/te2023-04-16T13%3A20%3A00Z> a owl:NamedIndividual, core:TemporalInstantValueExpression;
+  core:hasDateTimeStampInXSDExpression "2023-04-16T13:20:00Z"^^xsd:dateTimeStamp .
+
+<http://example.com/base/te2023-04-24T13%3A20%3A00Z> a owl:NamedIndividual, core:TemporalInstantValueExpression;
+  core:hasDateTimeStampInXSDExpression "2023-04-24T13:20:00Z"^^xsd:dateTimeStamp .
+
+<http://example.com/base/p3> a owl:NamedIndividual, bfo:BFO_0000015;
+  bfo:BFO_0000199 <http://example.com/base/2023-04-12T13%3A20%3A00Z2023-04-24T13%3A20%3A00Z> .
+
+<http://example.com/base/2023-04-12T13%3A20%3A00Z2023-04-24T13%3A20%3A00Z> a owl:NamedIndividual,
+    bfo:BFO_0000202;
+  bfo:BFO_0000222 <http://example.com/base/ti2023-04-12T13%3A20%3A00Z>;
+  bfo:BFO_0000224 <http://example.com/base/ti2023-04-24T13%3A20%3A00Z> .
+
+<http://example.com/base/p4> a owl:NamedIndividual, bfo:BFO_0000015;
+  bfo:BFO_0000199 <http://example.com/base/2023-04-14T13%3A20%3A00Z2023-04-16T13%3A20%3A00Z> .
+
+<http://example.com/base/2023-04-14T13%3A20%3A00Z2023-04-16T13%3A20%3A00Z> a owl:NamedIndividual,
+    bfo:BFO_0000202;
+  bfo:BFO_0000222 <http://example.com/base/ti2023-04-14T13%3A20%3A00Z>;
+  bfo:BFO_0000224 <http://example.com/base/ti2023-04-16T13%3A20%3A00Z> .
+
+<http://example.com/base/ti2023-04-14T13%3A20%3A00Z> a owl:NamedIndividual, bfo:BFO_0000203;
+  core:hasValueExpressionAtAllTimes <http://example.com/base/te2023-04-14T13%3A20%3A00Z> .
+
+<http://example.com/base/te2023-04-14T13%3A20%3A00Z> a owl:NamedIndividual, core:TemporalInstantValueExpression;
+  core:hasDateTimeStampInXSDExpression "2023-04-14T13:20:00Z"^^xsd:dateTimeStamp .
+
+<http://example.com/base/p5> a owl:NamedIndividual, bfo:BFO_0000015;
+  bfo:BFO_0000199 <http://example.com/base/2023-04-18T13%3A20%3A00Z2023-04-22T13%3A20%3A00Z> .
+
+<http://example.com/base/2023-04-18T13%3A20%3A00Z2023-04-22T13%3A20%3A00Z> a owl:NamedIndividual,
+    bfo:BFO_0000202;
+  bfo:BFO_0000222 <http://example.com/base/ti2023-04-18T13%3A20%3A00Z>;
+  bfo:BFO_0000224 <http://example.com/base/ti2023-04-22T13%3A20%3A00Z> .
+
+<http://example.com/base/ti2023-04-18T13%3A20%3A00Z> a owl:NamedIndividual, bfo:BFO_0000203;
+  core:hasValueExpressionAtAllTimes <http://example.com/base/te2023-04-18T13%3A20%3A00Z> .
+
+<http://example.com/base/ti2023-04-22T13%3A20%3A00Z> a owl:NamedIndividual, bfo:BFO_0000203;
+  core:hasValueExpressionAtAllTimes <http://example.com/base/te2023-04-22T13%3A20%3A00Z> .
+
+<http://example.com/base/te2023-04-18T13%3A20%3A00Z> a owl:NamedIndividual, core:TemporalInstantValueExpression;
+  core:hasDateTimeStampInXSDExpression "2023-04-18T13:20:00Z"^^xsd:dateTimeStamp .
+
+<http://example.com/base/te2023-04-22T13%3A20%3A00Z> a owl:NamedIndividual, core:TemporalInstantValueExpression;
+  core:hasDateTimeStampInXSDExpression "2023-04-22T13:20:00Z"^^xsd:dateTimeStamp .
+
+<http://example.com/base/p6> a owl:NamedIndividual, bfo:BFO_0000015;
+  bfo:BFO_0000199 <http://example.com/base/2023-04-12T13%3A20%3A00Z2023-04-24T13%3A20%3A00Z> .

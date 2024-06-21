@@ -17,29 +17,16 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:saref="https://saref.etsi.org/core/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:iof-av="https://purl.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
      xmlns:iof-core="https://purl.industrialontologies.org/ontology/core/Core/"
      xmlns:sensor-core="http://www.ontocommons.eu/test/sensor-core#"
      xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
-    <owl:Ontology/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://spec.industrialontologies.org/ontology/core/Core/occursSimultaneouslyWith -->
-
-    <owl:AnnotationProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/occursSimultaneouslyWith"/>
+    <owl:Ontology>
+        <owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/"/>
+        <owl:imports rdf:resource="https://spec.industrialontologies.org/rules/core/TemporalRelations02"/>
+    </owl:Ontology>
     
 
 
@@ -93,6 +80,12 @@
     <!-- https://spec.industrialontologies.org/ontology/core/Core/isOutputOf -->
 
     <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/isOutputOf"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/Core/occursSimultaneouslyWith -->
+
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/core/Core/occursSimultaneouslyWith"/>
     
 
 
@@ -311,18 +304,6 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000202 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000202"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000203 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000203"/>
     
 
 

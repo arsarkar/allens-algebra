@@ -1,0 +1,646 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2006/time#"
+     xml:base="http://www.w3.org/2006/time"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ex="http://example.org/time/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:dgu="http://reference.data.gov.uk/def/reference/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:scv="http://purl.org/NET/scovo#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Core="https://spec.industrialontologies.org/ontology/core/Core/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:tzont="http://www.w3.org/2006/timezone#"
+     xmlns:schema="http://schema.org/"
+     xmlns:interval="http://reference.data.gov.uk/def/intervals/"
+     xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
+    <owl:Ontology rdf:about="http://example.org/time">
+        <owl:imports rdf:resource="http://reference.data.gov.uk/def/intervals/"/>
+        <owl:imports rdf:resource="http://reference.data.gov.uk/id/quarter/2006-Q1"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/dcat"/>
+        <owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/"/>
+        <owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/commonstocoremapping/MappingOWLTimeToIOF/"/>
+        <dgu:uriSet rdf:resource="http://reference.data.gov.uk/id/quarter"/>
+        <rdfs:comment xml:lang="en">The first quarter of the British calendar year 2006</rdfs:comment>
+        <rdfs:label xml:lang="en">British Quarter:2006-Q1</rdfs:label>
+        <skos:prefLabel xml:lang="en">British Quarter:2006-Q1</skos:prefLabel>
+        <foaf:isPrimaryTopicOf rdf:resource="http://reference.data.gov.uk/doc/quarter/2006-Q1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/accrualPeriodicity -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/accrualPeriodicity"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/language"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/spatial -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/spatial"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/temporal -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/temporal"/>
+    
+
+
+    <!-- http://reference.data.gov.uk/def/reference/uriSet -->
+
+    <owl:AnnotationProperty rdf:about="http://reference.data.gov.uk/def/reference/uriSet"/>
+    
+
+
+    <!-- http://www.w3.org/2006/timezone#GMToffset -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/timezone#GMToffset"/>
+    
+
+
+    <!-- http://www.w3.org/2006/timezone#name -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/timezone#name"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/isPrimaryTopicOf -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/isPrimaryTopicOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2006/time#Number -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2006/time#Number"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#genDay -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2006/time#genDay"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#genMonth -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2006/time#genMonth"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#genYear -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2006/time#genYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/time/validTime -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/time/validTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#hasTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/time/GPSTime -->
+
+    <owl:Class rdf:about="http://example.org/time/GPSTime">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#GeneralDateTimeDescription"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#hasTRS"/>
+                <owl:hasValue rdf:resource="https://en.wikipedia.org/wiki/Global_Positioning_System#Timekeeping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#unitType"/>
+                <owl:hasValue rdf:resource="http://www.w3.org/2006/time#unitSecond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#dayOfWeek"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#monthOfYear"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#timeZone"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#day"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#dayOfYear"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#hour"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#minute"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#month"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#second"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#week"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#year"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>GPS Time is the number of seconds since an epoch in 1980, encoded as the number of weeks + seconds into the week</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/time/UnixTime -->
+
+    <owl:Class rdf:about="http://example.org/time/UnixTime">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TimePosition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#hasTRS"/>
+                <owl:hasValue rdf:resource="http://dbpedia.org/resource/Unix_time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#numericPosition"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#nominalPosition"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/timezone#TimeZone -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/timezone#TimeZone"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/page/Coordinated_Universal_Time -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/page/Coordinated_Universal_Time"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Hebrew_calendar -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hebrew_calendar"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Unix_time -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Unix_time"/>
+    
+
+
+    <!-- http://example.org/time/AbbyBirthday -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/time/AbbyBirthday">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/time/AbbyBirthdayGregorian"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/time/AbbyBirthdayHebrew"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/time/AbbyBirthdayUnix"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="https://www.timeanddate.com/time/zones/AbbyBirthdayInDateTime"/>
+        <rdfs:label>Abby&apos;s birthdate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/time/AbbyBirthdayGregorian -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/time/AbbyBirthdayGregorian">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <dayOfWeek rdf:resource="http://www.w3.org/2006/time#Wednesday"/>
+        <monthOfYear rdf:resource="http://www.w3.org/ns/time-gregorian/May"/>
+        <timeZone>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2006/timezone#TimeZone"/>
+                <tzont:GMToffset>+8</tzont:GMToffset>
+                <tzont:name>AWST</tzont:name>
+            </rdf:Description>
+        </timeZone>
+        <unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+        <day rdf:datatype="http://www.w3.org/2001/XMLSchema#gDay">---23</day>
+        <dayOfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">143</dayOfYear>
+        <hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</hour>
+        <minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">20</minute>
+        <month rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">--05</month>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2001</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/time/AbbyBirthdayHebrew -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/time/AbbyBirthdayHebrew">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#GeneralDateTimeDescription"/>
+        <hasTRS rdf:resource="http://dbpedia.org/resource/Hebrew_calendar"/>
+        <unitType rdf:resource="http://www.w3.org/2006/time#unitDay"/>
+        <day rdf:datatype="http://www.w3.org/2006/time#genDay">---01</day>
+        <month rdf:datatype="http://www.w3.org/2006/time#genMonth">--03</month>
+        <year rdf:datatype="http://www.w3.org/2006/time#genYear">5761</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/time/AbbyBirthdayUnix -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/time/AbbyBirthdayUnix">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#TimePosition"/>
+        <hasTRS rdf:resource="http://dbpedia.org/resource/Unix_time"/>
+        <numericPosition rdf:datatype="http://www.w3.org/2006/time#Number">990577200</numericPosition>
+        <rdfs:label>Abby&apos;s birthdate in Unix time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/time/DatabaseTimeStamp -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/time/DatabaseTimeStamp">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <inDateTime>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://example.org/time/GPSTime"/>
+                <second rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64696.102</second>
+                <week rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1834</week>
+            </rdf:Description>
+        </inDateTime>
+        <inDateTime>
+            <rdf:Description rdf:nodeID="genid19">
+                <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+                <timeZone rdf:resource="http://dbpedia.org/page/Coordinated_Universal_Time"/>
+                <day rdf:datatype="http://www.w3.org/2001/XMLSchema#gDay">---01</day>
+                <hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">17</hour>
+                <minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">58</minute>
+                <month rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">--11</month>
+                <second rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.102</second>
+                <year rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2015</year>
+            </rdf:Description>
+        </inDateTime>
+        <inTimePosition>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://example.org/time/UnixTime"/>
+                <numericPosition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1446400696</numericPosition>
+            </rdf:Description>
+        </inTimePosition>
+        <inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-11-01T17:58:16.102Z</inXSDDateTimeStamp>
+        <rdfs:comment>A database timestamp with lots of fractions in the seconds</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/time/Microseconds -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/time/Microseconds">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <hasDuration>
+            <rdf:Description rdf:nodeID="genid21">
+                <rdf:type rdf:resource="http://www.w3.org/2006/time#Duration"/>
+                <unitType rdf:resource="http://www.w3.org/2006/time#unitSecond"/>
+                <numericDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.00000037</numericDuration>
+            </rdf:Description>
+        </hasDuration>
+        <hasDurationDescription>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+                <seconds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.00000037</seconds>
+            </rdf:Description>
+        </hasDurationDescription>
+        <rdfs:comment>A temporal entity with duration 0.37 microseconds</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/time/Sivan -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/time/Sivan">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#MonthOfYear"/>
+        <unitType rdf:resource="http://www.w3.org/2006/time#unitMonth"/>
+        <month rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">--03</month>
+        <rdfs:label xml:lang="en">Sivan</rdfs:label>
+        <skos:prefLabel xml:lang="en">Sivan</skos:prefLabel>
+        <skos:prefLabel xml:lang="he">סִיוָן </skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/time/dataset-001 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/time/dataset-001">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <dcat:contactPoint rdf:resource="http://example.org/transparency-office/contact"/>
+        <dcat:distribution rdf:resource="http://www.w3.org/2006/time#dataset-001-csv"/>
+        <dcat:keyword>accountability</dcat:keyword>
+        <dcat:keyword>payments</dcat:keyword>
+        <dcat:keyword>transparency</dcat:keyword>
+        <dct:accrualPeriodicity rdf:resource="http://purl.org/linked-data/sdmx/2009/code#freq-W"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-12-05</dct:issued>
+        <dct:language rdf:resource="http://id.loc.gov/vocabulary/iso639-1/en"/>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-12-05</dct:modified>
+        <dct:publisher rdf:resource="http://www.w3.org/2006/time#finance-ministry"/>
+        <dct:spatial rdf:resource="http://www.geonames.org/6695072"/>
+        <dct:temporal rdf:resource="http://reference.data.gov.uk/id/quarter/2006-Q1"/>
+        <dct:title>Imaginary dataset</dct:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/time/meetingStart -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/time/meetingStart">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/time/meetingStartDescription"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/time/meetingStartDescription -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/time/meetingStartDescription">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <dayOfWeek rdf:resource="http://www.w3.org/2006/time#Sunday"/>
+        <monthOfYear rdf:resource="http://www.w3.org/ns/time-gregorian/January"/>
+        <timeZone rdf:resource="https://www.timeanddate.com/time/zones/est"/>
+        <unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+        <day rdf:datatype="http://www.w3.org/2001/XMLSchema#gDay">---01</day>
+        <dayOfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</dayOfYear>
+        <hour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hour>
+        <minute rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</minute>
+        <month rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">--01</month>
+        <week rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</week>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2006</year>
+        <Core:hasDateTimeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2006-01-01T10:30:00-05:00</Core:hasDateTimeValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/transparency-office/contact -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/transparency-office/contact"/>
+    
+
+
+    <!-- http://reference.data.gov.uk/def/intervals/one-quarter -->
+
+    <rdf:Description rdf:about="http://reference.data.gov.uk/def/intervals/one-quarter">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+        <hasXSDDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P3M</hasXSDDuration>
+        <months rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</months>
+        <rdfs:comment xml:lang="en">A duration of one quarter, typically 3 months.</rdfs:comment>
+        <rdfs:label>1 quarter of a year</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://reference.data.gov.uk/id/gregorian-instant/2006-01-01T00:00:00 -->
+
+    <owl:NamedIndividual rdf:about="http://reference.data.gov.uk/id/gregorian-instant/2006-01-01T00:00:00"/>
+    
+
+
+    <!-- http://reference.data.gov.uk/id/gregorian-instant/2006-04-01T00:00:00 -->
+
+    <owl:NamedIndividual rdf:about="http://reference.data.gov.uk/id/gregorian-instant/2006-04-01T00:00:00"/>
+    
+
+
+    <!-- http://reference.data.gov.uk/id/gregorian-interval/2006-01-01T00:00:00/P3M -->
+
+    <owl:NamedIndividual rdf:about="http://reference.data.gov.uk/id/gregorian-interval/2006-01-01T00:00:00/P3M"/>
+    
+
+
+    <!-- http://reference.data.gov.uk/id/half/2006-H1 -->
+
+    <owl:NamedIndividual rdf:about="http://reference.data.gov.uk/id/half/2006-H1"/>
+    
+
+
+    <!-- http://reference.data.gov.uk/id/month/2006-01 -->
+
+    <owl:NamedIndividual rdf:about="http://reference.data.gov.uk/id/month/2006-01"/>
+    
+
+
+    <!-- http://reference.data.gov.uk/id/month/2006-02 -->
+
+    <owl:NamedIndividual rdf:about="http://reference.data.gov.uk/id/month/2006-02"/>
+    
+
+
+    <!-- http://reference.data.gov.uk/id/month/2006-03 -->
+
+    <owl:NamedIndividual rdf:about="http://reference.data.gov.uk/id/month/2006-03"/>
+    
+
+
+    <!-- http://reference.data.gov.uk/id/quarter/2005-Q4 -->
+
+    <owl:NamedIndividual rdf:about="http://reference.data.gov.uk/id/quarter/2005-Q4"/>
+    
+
+
+    <!-- http://reference.data.gov.uk/id/quarter/2006-Q1 -->
+
+    <owl:NamedIndividual rdf:about="http://reference.data.gov.uk/id/quarter/2006-Q1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+        <hasBeginning rdf:resource="http://reference.data.gov.uk/id/gregorian-instant/2006-01-01T00:00:00"/>
+        <hasBeginning>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+                <inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-01-01</inXSDDate>
+            </rdf:Description>
+        </hasBeginning>
+        <hasDurationDescription rdf:resource="http://reference.data.gov.uk/def/intervals/one-quarter"/>
+        <hasEnd rdf:resource="http://reference.data.gov.uk/id/gregorian-instant/2006-04-01T00:00:00"/>
+        <hasEnd>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+                <inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-03-31</inXSDDate>
+            </rdf:Description>
+        </hasEnd>
+        <intervalContains rdf:resource="http://reference.data.gov.uk/id/month/2006-02"/>
+        <intervalDuring rdf:resource="http://reference.data.gov.uk/id/half/2006-H1"/>
+        <intervalDuring rdf:resource="http://reference.data.gov.uk/id/year/2006"/>
+        <intervalEquals rdf:resource="http://reference.data.gov.uk/id/gregorian-interval/2006-01-01T00:00:00/P3M"/>
+        <intervalFinishedBy rdf:resource="http://reference.data.gov.uk/id/month/2006-03"/>
+        <intervalMeets rdf:resource="http://reference.data.gov.uk/id/quarter/2006-Q2"/>
+        <intervalMetBy rdf:resource="http://reference.data.gov.uk/id/quarter/2005-Q4"/>
+        <intervalStartedBy rdf:resource="http://reference.data.gov.uk/id/month/2006-01"/>
+        <interval:ordinalHalfOfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</interval:ordinalHalfOfYear>
+        <interval:ordinalQuarterOfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</interval:ordinalQuarterOfYear>
+        <interval:ordinalYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</interval:ordinalYear>
+        <hasXSDDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P3M</hasXSDDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://reference.data.gov.uk/id/quarter/2006-Q2 -->
+
+    <owl:NamedIndividual rdf:about="http://reference.data.gov.uk/id/quarter/2006-Q2"/>
+    
+
+
+    <!-- http://reference.data.gov.uk/id/year/2006 -->
+
+    <owl:NamedIndividual rdf:about="http://reference.data.gov.uk/id/year/2006"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#dataset-001-csv -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#dataset-001-csv"/>
+    
+
+
+    <!-- http://www.w3.org/ns/time-gregorian/January -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/time-gregorian/January"/>
+    
+
+
+    <!-- http://www.w3.org/ns/time-gregorian/May -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/time-gregorian/May"/>
+    
+
+
+    <!-- https://en.wikipedia.org/wiki/Global_Positioning_System#Timekeeping -->
+
+    <owl:NamedIndividual rdf:about="https://en.wikipedia.org/wiki/Global_Positioning_System#Timekeeping"/>
+    
+
+
+    <!-- https://www.timeanddate.com/time/zones/AbbyBirthdayInDateTime -->
+
+    <owl:NamedIndividual rdf:about="https://www.timeanddate.com/time/zones/AbbyBirthdayInDateTime">
+        <rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/TemporalInstantValueExpression"/>
+        <Core:hasDateTimeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-05-23T08:20:00+08:00</Core:hasDateTimeValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.timeanddate.com/time/zones/est -->
+
+    <owl:NamedIndividual rdf:about="https://www.timeanddate.com/time/zones/est"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

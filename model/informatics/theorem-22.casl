@@ -1,0 +1,324 @@
+%% temporal instant specification
+spec temporal-instant =
+sort TemporalInstant
+pred __precedes__ : TemporalInstant * TemporalInstant
+forall x, y, z:TemporalInstant
+. not (x precedes x) %(instant_irreflexive)%
+. (x precedes y) /\ (y precedes z) => (x precedes z)  %(instant_transitive)%
+%%. (x precedes y) => not (y precedes x) %(instant_assymetric)% %implied
+then
+forall x, y:TemporalInstant
+. (x precedes y) \/ (y precedes x) \/ (x = y) %(instant_totally_ordered)%
+%%. (x precedes y) => not (x = y) %implied %%proven by irreflexive
+end
+
+%% temporal interval specification
+spec temporal-interval =
+temporal-instant
+then
+sort TemporalInterval
+pred __precedes__ : TemporalInterval * TemporalInterval
+forall x, y, z:TemporalInterval
+. not (x precedes x) %(interval_irreflexive)%
+. (x precedes y) /\ (y precedes z) => (x precedes z)  %(interval_transitive)%
+%%. (x precedes y) => not (y precedes x) %(interval_assymetric)% %implied
+then
+pred __hasFirstInstant__ : TemporalInterval * TemporalInstant
+pred __hasLastInstant__ : TemporalInterval * TemporalInstant
+forall x:TemporalInterval
+. exists y:TemporalInstant . (x hasFirstInstant y) %(interval_has_first)%
+. exists z:TemporalInstant . (x hasLastInstant z) %(interval_has_last)%
+end 
+
+%% temporal interval identity
+spec temporal-interval-identity =
+temporal-interval
+then
+forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
+. (x hasFirstInstant xf) /\ (x hasLastInstant xl) => (xf precedes xl) %(first_precedes_last)%
+. (x hasFirstInstant xf) /\ (x hasFirstInstant yf) => (xf=yf) %(unique_first_instant)%
+. (x hasLastInstant xl) /\ (x hasLastInstant yl) => (xl=yl) %(unique_last_instant)%
+. (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (xf = yf) /\ (xl = yl) <=> (x = y) %(same_interval)%
+. (x precedes y) <=> (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ ((xl precedes yf) \/ (xl=yf)) %(def_precedes)%
+end
+
+%% temporal interval meets
+spec temporal-interval-meets =
+temporal-interval-identity
+then
+pred __meets__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
+. (x meets y) <=> (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (xl=yf) %(def_meets)%
+. (x meets y) => (x precedes y) %(precedes_subsumes_meets)% %implied
+end
+
+%% temporal interval before
+spec temporal-interval-before =
+temporal-interval-identity
+then
+pred __before__ : TemporalInterval * TemporalInterval
+forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
+. (x before y) <=> (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (xl precedes yf)  %(def_before)%
+. (x before y) => (x precedes y) %(precedes_subsumes_before)% %implied
+end
+
+%% covering axiom for precedes
+spec temporal-interval-precedes-cover
+= temporal-interval-meets and temporal-interval-before
+then
+forall x, y:TemporalInterval
+. (x precedes y) => (x meets y) \/ (x before y) %(precedes_cover)% %implied
+end
+
+%%---------------------------Results----------------------------------%%
+temporal-interval-precedes-cover
+Results for precedes_cover (Proved)
+Used Prover
+SPASS
+
+Tactic Script
+1
+
+Proof Tree
+Used Time
+0.029999999999 0 0 0.029999999999
+Used Axioms
+sign_non_empty_sort_TemporalInstant
+Prover Output
+--------------------------SPASS-START-----------------------------
+Input Problem:
+1[0:Inp] ||  -> sort_TemporalInterval(skc5)*.
+2[0:Inp] ||  -> sort_TemporalInterval(skc4)*.
+3[0:Inp] ||  -> sort_TemporalInstant(skc6)*.
+4[0:Inp] ||  -> sort_TemporalInterval(skc7)*.
+5[0:Inp] ||  -> pred___precedes__(skc5,skc4)*.
+6[0:Inp] ||  -> sort_TemporalInstant(skf2(U))*.
+7[0:Inp] ||  -> sort_TemporalInstant(skf3(U))*.
+8[0:Inp] || pred___meets__(skc5,skc4)* -> .
+9[0:Inp] || pred___before__(skc5,skc4)* -> .
+10[0:Inp] || sort_TemporalInstant(U)* sort_TemporalInterval(U) -> .
+11[0:Inp] || sort_TemporalInterval(U) sort_TemporalInstant(U)* -> .
+12[0:Inp] || sort_TemporalInterval(U) -> pred___hasFirstInstant__(U,skf2(U))*.
+13[0:Inp] || sort_TemporalInterval(U) -> pred___hasLastInstant__(U,skf3(U))*.
+14[0:Inp] || sort_TemporalInterval(U) pred___precedes__(U,U)* -> .
+15[0:Inp] || sort_TemporalInstant(U) pred___precedes__(U,U)* -> .
+16[0:Inp] || sort_TemporalInstant(U) sort_TemporalInstant(V) -> pred___precedes__(U,V)* pred___precedes__(V,U)* equal(U,V).
+17[0:Inp] || pred___before__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W) -> pred___hasFirstInstant__(U,W)*.
+18[0:Inp] || pred___before__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W) -> pred___hasLastInstant__(U,W)*.
+19[0:Inp] || pred___before__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W) -> pred___hasFirstInstant__(V,W)*.
+20[0:Inp] || pred___before__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W) -> pred___hasLastInstant__(V,W)*.
+21[0:Inp] || equal(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V)* sort_TemporalInstant(W) -> pred___hasFirstInstant__(U,W)*.
+22[0:Inp] || equal(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V)* sort_TemporalInstant(W) -> pred___hasLastInstant__(U,W)*.
+23[0:Inp] || equal(U,V)* sort_TemporalInterval(U)* sort_TemporalInterval(V) sort_TemporalInstant(W) -> pred___hasFirstInstant__(V,W)*.
+24[0:Inp] || equal(U,V)* sort_TemporalInterval(U)* sort_TemporalInterval(V) sort_TemporalInstant(W) -> pred___hasLastInstant__(V,W)*.
+25[0:Inp] || pred___precedes__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W) -> pred___hasFirstInstant__(U,W)*.
+26[0:Inp] || pred___precedes__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W) -> pred___hasLastInstant__(U,W)*.
+27[0:Inp] || pred___precedes__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W) -> pred___hasFirstInstant__(V,W)*.
+28[0:Inp] || pred___precedes__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W) -> pred___hasLastInstant__(V,W)*.
+29[0:Inp] || pred___meets__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W) -> pred___hasFirstInstant__(U,W)*.
+30[0:Inp] || pred___meets__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W) -> pred___hasLastInstant__(U,W)*.
+31[0:Inp] || pred___meets__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W) -> pred___hasFirstInstant__(V,W)*.
+32[0:Inp] || pred___meets__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W) -> pred___hasLastInstant__(V,W)*.
+33[0:Inp] || pred___before__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W) sort_TemporalInstant(X) -> pred___precedes__(W,X)*.
+34[0:Inp] || equal(U,V)* sort_TemporalInterval(U)* sort_TemporalInterval(V)* sort_TemporalInstant(W)* sort_TemporalInstant(X)* -> equal(W,X)*.
+35[0:Inp] || pred___meets__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W)* sort_TemporalInstant(X)* -> equal(W,X)*.
+36[0:Inp] || sort_TemporalInstant(U) pred___precedes__(U,V)* pred___precedes__(V,W)* sort_TemporalInstant(V) sort_TemporalInstant(W) -> pred___precedes__(U,W)*.
+37[0:Inp] || sort_TemporalInterval(U) pred___precedes__(U,V)* pred___precedes__(V,W)* sort_TemporalInterval(V) sort_TemporalInterval(W) -> pred___precedes__(U,W)*.
+38[0:Inp] || sort_TemporalInterval(U) pred___hasLastInstant__(U,V)* pred___hasLastInstant__(U,W)* sort_TemporalInstant(V) sort_TemporalInstant(W) -> equal(V,W)*.
+39[0:Inp] || sort_TemporalInterval(U) pred___hasFirstInstant__(U,V)* pred___hasFirstInstant__(U,W)* sort_TemporalInstant(V) sort_TemporalInstant(W) -> equal(V,W)*.
+40[0:Inp] || sort_TemporalInterval(U) pred___hasFirstInstant__(U,V)* pred___hasLastInstant__(U,W)* sort_TemporalInstant(V) sort_TemporalInstant(W) -> pred___precedes__(V,W)*.
+41[0:Inp] || pred___precedes__(U,V)* sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInstant(W) sort_TemporalInstant(X) -> pred___precedes__(W,X)* equal(W,X).
+42[0:Inp] || pred___hasFirstInstant__(U,V)* pred___hasLastInstant__(U,W)* pred___hasFirstInstant__(X,Y)* pred___hasLastInstant__(X,Z)* equal(W,Y)* sort_TemporalInterval(U) sort_TemporalInterval(X) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(Y) sort_TemporalInstant(Z) -> pred___meets__(U,X)*.
+43[0:Inp] || equal(U,V)* pred___hasFirstInstant__(W,X)* pred___hasLastInstant__(W,U)* pred___hasFirstInstant__(Y,V)* pred___hasLastInstant__(Y,Z)* sort_TemporalInterval(W) sort_TemporalInterval(Y) sort_TemporalInstant(X) sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(Z) -> pred___precedes__(W,Y)*.
+44[0:Inp] || pred___precedes__(U,V)* pred___hasFirstInstant__(W,X)* pred___hasLastInstant__(W,U)* pred___hasFirstInstant__(Y,V)* pred___hasLastInstant__(Y,Z)* sort_TemporalInterval(W) sort_TemporalInterval(Y) sort_TemporalInstant(X) sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(Z) -> pred___precedes__(W,Y)*.
+45[0:Inp] || pred___hasFirstInstant__(U,V)* pred___hasLastInstant__(U,W)* pred___hasFirstInstant__(X,Y)* pred___hasLastInstant__(X,Z)* pred___precedes__(W,Y)* sort_TemporalInterval(U) sort_TemporalInterval(X) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(Y) sort_TemporalInstant(Z) -> pred___before__(U,X)*.
+46[0:Inp] || pred___hasFirstInstant__(U,V)* pred___hasLastInstant__(U,W)* pred___hasFirstInstant__(X,Y)* pred___hasLastInstant__(X,Z)* equal(V,Y)* equal(W,Z)* sort_TemporalInterval(U) sort_TemporalInterval(X) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(Y) sort_TemporalInstant(Z) -> equal(U,X)*.
+ This is a first-order Non-Horn problem containing equality.
+ This is a problem that contains sort information.
+ All equations are many sorted.
+ The conjecture is ground.
+ The following monadic predicates have finite extensions: sort_TemporalInterval.
+ Axiom clauses: 41 Conjecture clauses: 5
+ Inferences: IEmS=1 ISoR=1 IEqR=1 IEqF=1 ISpR=1 ISpL=1 IORe=1 IOFc=1 
+ Reductions: RFRew=1 RBRew=1 RFMRR=1 RBMRR=1 RObv=1 RUnC=1 RTaut=1 RSST=1 RSSi=1 RFSub=1 RBSub=1 RAED=1 RCon=1 
+ Extras    : Input Saturation, Dynamic Selection, Full Splitting, Full Reduction,  Ratio: 5, FuncWeight: 1, VarWeight: 1
+ Precedence: skf3 > skf2 > skf1 > skf0 > pred___meets__ > pred___precedes__ > pred___hasLastInstant__ > pred___hasFirstInstant__ > pred___before__ > sort_TemporalInstant > sort_TemporalInterval > skc7 > skc6 > skc5 > skc4 > skc3 > skc2 > skc1 > skc0
+ Ordering  : KBO
+Processed Problem:
+
+Worked Off Clauses:
+
+Usable Clauses:
+4[0:Inp] ||  -> sort_TemporalInterval(skc7)*.
+2[0:Inp] ||  -> sort_TemporalInterval(skc4)*.
+1[0:Inp] ||  -> sort_TemporalInterval(skc5)*.
+3[0:Inp] ||  -> sort_TemporalInstant(skc6)*.
+5[0:Inp] ||  -> pred___precedes__(skc5,skc4)*.
+7[0:Inp] ||  -> sort_TemporalInstant(skf3(U))*.
+6[0:Inp] ||  -> sort_TemporalInstant(skf2(U))*.
+77[0:Res:2.0,11.0] sort_TemporalInstant(skc4) ||  -> .
+9[0:Inp] || pred___before__(skc5,skc4)* -> .
+8[0:Inp] || pred___meets__(skc5,skc4)* -> .
+74[0:Res:2.0,12.0] ||  -> pred___hasFirstInstant__(skc4,skf2(skc4))*.
+75[0:Res:2.0,13.0] ||  -> pred___hasLastInstant__(skc4,skf3(skc4))*.
+76[0:Res:2.0,14.0] || pred___precedes__(skc4,skc4)* -> .
+11[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(U) ||  -> .
+13[0:Inp] sort_TemporalInterval(U) ||  -> pred___hasLastInstant__(U,skf3(U))*.
+12[0:Inp] sort_TemporalInterval(U) ||  -> pred___hasFirstInstant__(U,skf2(U))*.
+14[0:Inp] sort_TemporalInterval(U) || pred___precedes__(U,U)* -> .
+15[0:Inp] sort_TemporalInstant(U) || pred___precedes__(U,U)* -> .
+60[0:Res:2.0,17.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___before__(skc4,V)* -> pred___hasFirstInstant__(skc4,U)*.
+61[0:Res:2.0,18.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___before__(skc4,V)* -> pred___hasLastInstant__(skc4,U)*.
+70[0:Res:2.0,29.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___meets__(skc4,V)* -> pred___hasFirstInstant__(skc4,U)*.
+71[0:Res:2.0,30.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___meets__(skc4,V)* -> pred___hasLastInstant__(skc4,U)*.
+66[0:Res:2.0,25.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___precedes__(skc4,V)* -> pred___hasFirstInstant__(skc4,U)*.
+67[0:Res:2.0,26.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___precedes__(skc4,V)* -> pred___hasLastInstant__(skc4,U)*.
+92[0:Res:2.0,23.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || equal(V,skc4)* -> pred___hasFirstInstant__(skc4,U)*.
+93[0:Res:2.0,24.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || equal(V,skc4)* -> pred___hasLastInstant__(skc4,U)*.
+90[0:Res:2.0,19.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___before__(V,skc4)* -> pred___hasFirstInstant__(skc4,U)*.
+91[0:Res:2.0,20.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___before__(V,skc4)* -> pred___hasLastInstant__(skc4,U)*.
+100[0:Res:2.0,31.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___meets__(V,skc4)* -> pred___hasFirstInstant__(skc4,U)*.
+101[0:Res:2.0,32.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___meets__(V,skc4)* -> pred___hasLastInstant__(skc4,U)*.
+96[0:Res:2.0,27.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___precedes__(V,skc4)* -> pred___hasFirstInstant__(skc4,U)*.
+97[0:Res:2.0,28.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___precedes__(V,skc4)* -> pred___hasLastInstant__(skc4,U)*.
+64[0:Res:2.0,23.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || equal(skc4,V) -> pred___hasFirstInstant__(V,U)*.
+65[0:Res:2.0,24.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || equal(skc4,V) -> pred___hasLastInstant__(V,U)*.
+62[0:Res:2.0,19.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___before__(skc4,V) -> pred___hasFirstInstant__(V,U)*.
+63[0:Res:2.0,20.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___before__(skc4,V) -> pred___hasLastInstant__(V,U)*.
+72[0:Res:2.0,31.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___meets__(skc4,V)* -> pred___hasFirstInstant__(V,U)*.
+73[0:Res:2.0,32.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___meets__(skc4,V)* -> pred___hasLastInstant__(V,U)*.
+68[0:Res:2.0,27.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___precedes__(skc4,V)* -> pred___hasFirstInstant__(V,U)*.
+69[0:Res:2.0,28.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___precedes__(skc4,V)* -> pred___hasLastInstant__(V,U)*.
+88[0:Res:2.0,17.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___before__(V,skc4) -> pred___hasFirstInstant__(V,U)*.
+89[0:Res:2.0,18.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___before__(V,skc4) -> pred___hasLastInstant__(V,U)*.
+98[0:Res:2.0,29.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___meets__(V,skc4)* -> pred___hasFirstInstant__(V,U)*.
+99[0:Res:2.0,30.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___meets__(V,skc4)* -> pred___hasLastInstant__(V,U)*.
+94[0:Res:2.0,25.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___precedes__(V,skc4)* -> pred___hasFirstInstant__(V,U)*.
+95[0:Res:2.0,26.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___precedes__(V,skc4)* -> pred___hasLastInstant__(V,U)*.
+16[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) ||  -> equal(V,U) pred___precedes__(U,V)* pred___precedes__(V,U)*.
+32[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___meets__(W,V)* -> pred___hasLastInstant__(V,U)*.
+31[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___meets__(W,V)* -> pred___hasFirstInstant__(V,U)*.
+30[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___meets__(W,V)* -> pred___hasLastInstant__(W,U)*.
+29[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___meets__(W,V)* -> pred___hasFirstInstant__(W,U)*.
+20[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___before__(W,V)* -> pred___hasLastInstant__(V,U)*.
+19[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___before__(W,V)* -> pred___hasFirstInstant__(V,U)*.
+18[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___before__(W,V)* -> pred___hasLastInstant__(W,U)*.
+17[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___before__(W,V)* -> pred___hasFirstInstant__(W,U)*.
+28[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___precedes__(W,V)* -> pred___hasLastInstant__(V,U)*.
+27[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___precedes__(W,V)* -> pred___hasFirstInstant__(V,U)*.
+26[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___precedes__(W,V)* -> pred___hasLastInstant__(W,U)*.
+25[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___precedes__(W,V)* -> pred___hasFirstInstant__(W,U)*.
+24[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || equal(W,V)* -> pred___hasLastInstant__(V,U)*.
+23[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || equal(W,V)* -> pred___hasFirstInstant__(V,U)*.
+57[0:Res:2.0,33.0] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) || pred___before__(skc4,W)* -> pred___precedes__(V,U)*.
+59[0:Res:2.0,35.0] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) || pred___meets__(skc4,W)* -> equal(V,U)*.
+58[0:Res:2.0,34.0] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) || equal(skc4,W)* -> equal(V,U)*.
+85[0:Res:2.0,33.1] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) || pred___before__(W,skc4)* -> pred___precedes__(V,U)*.
+87[0:Res:2.0,35.1] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) || pred___meets__(W,skc4)* -> equal(V,U)*.
+56[0:Res:2.0,37.0] sort_TemporalInterval(U) sort_TemporalInterval(V) || pred___precedes__(V,U)* pred___precedes__(skc4,V)* -> pred___precedes__(skc4,U)*.
+102[0:Res:2.0,37.2] sort_TemporalInterval(U) sort_TemporalInterval(V) || pred___precedes__(V,U)* pred___precedes__(U,skc4)* -> pred___precedes__(V,skc4)*.
+53[0:Res:2.0,40.0] sort_TemporalInstant(U) sort_TemporalInstant(V) || pred___hasLastInstant__(skc4,U) pred___hasFirstInstant__(skc4,V) -> pred___precedes__(V,U)*.
+54[0:Res:2.0,39.0] sort_TemporalInstant(U) sort_TemporalInstant(V) || pred___hasFirstInstant__(skc4,U)* pred___hasFirstInstant__(skc4,V)* -> equal(V,U)*.
+55[0:Res:2.0,38.0] sort_TemporalInstant(U) sort_TemporalInstant(V) || pred___hasLastInstant__(skc4,U)* pred___hasLastInstant__(skc4,V)* -> equal(V,U)*.
+84[0:Res:2.0,37.1] sort_TemporalInterval(U) sort_TemporalInterval(V) || pred___precedes__(V,skc4)* pred___precedes__(skc4,U)* -> pred___precedes__(V,U)*.
+33[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) sort_TemporalInterval(X) || pred___before__(X,W)* -> pred___precedes__(V,U)*.
+35[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) sort_TemporalInterval(X) || pred___meets__(X,W)* -> equal(V,U)*.
+34[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) sort_TemporalInterval(X) || equal(X,W)* -> equal(V,U)*.
+52[0:Res:2.0,41.0] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) || pred___precedes__(skc4,W)* -> equal(V,U) pred___precedes__(V,U)*.
+83[0:Res:2.0,41.1] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) || pred___precedes__(W,skc4)* -> equal(V,U) pred___precedes__(V,U)*.
+37[0:Inp] sort_TemporalInterval(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___precedes__(V,U)* pred___precedes__(W,V)* -> pred___precedes__(W,U)*.
+36[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) || pred___precedes__(V,U)* pred___precedes__(W,V)* -> pred___precedes__(W,U)*.
+40[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) || pred___hasLastInstant__(W,U)* pred___hasFirstInstant__(W,V)* -> pred___precedes__(V,U)*.
+38[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) || pred___hasLastInstant__(W,U)* pred___hasLastInstant__(W,V)* -> equal(V,U)*.
+39[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) || pred___hasFirstInstant__(W,U)* pred___hasFirstInstant__(W,V)* -> equal(V,U)*.
+41[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) sort_TemporalInterval(X) || pred___precedes__(X,W)* -> equal(V,U) pred___precedes__(V,U)*.
+48[0:Res:2.0,45.0] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(X) sort_TemporalInterval(Y) || pred___precedes__(W,V)* pred___hasLastInstant__(Y,U)* pred___hasFirstInstant__(Y,V)* pred___hasFirstInstant__(skc4,X)* pred___hasLastInstant__(skc4,W) -> pred___before__(skc4,Y).
+51[0:Res:2.0,42.0] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(X) sort_TemporalInterval(Y) || equal(W,V)* pred___hasLastInstant__(Y,U)* pred___hasFirstInstant__(Y,V)* pred___hasFirstInstant__(skc4,X)* pred___hasLastInstant__(skc4,W)* -> pred___meets__(skc4,Y)*.
+50[0:Res:2.0,43.0] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(X) sort_TemporalInterval(Y) || equal(W,V)* pred___hasLastInstant__(Y,U)* pred___hasFirstInstant__(Y,V)* pred___hasLastInstant__(skc4,W)* pred___hasFirstInstant__(skc4,X)* -> pred___precedes__(skc4,Y)*.
+49[0:Res:2.0,44.0] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(X) sort_TemporalInterval(Y) || pred___precedes__(W,V)* pred___hasLastInstant__(Y,U)* pred___hasFirstInstant__(Y,V)* pred___hasLastInstant__(skc4,W) pred___hasFirstInstant__(skc4,X)* -> pred___precedes__(skc4,Y)*.
+79[0:Res:2.0,45.1] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(X) sort_TemporalInterval(Y) || pred___hasFirstInstant__(Y,X)* pred___precedes__(W,V)* pred___hasLastInstant__(Y,W)* pred___hasLastInstant__(skc4,U)* pred___hasFirstInstant__(skc4,V) -> pred___before__(Y,skc4).
+82[0:Res:2.0,42.1] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(X) sort_TemporalInterval(Y) || pred___hasFirstInstant__(Y,X)* equal(W,V)* pred___hasLastInstant__(Y,W)* pred___hasLastInstant__(skc4,U)* pred___hasFirstInstant__(skc4,V)* -> pred___meets__(Y,skc4)*.
+81[0:Res:2.0,43.1] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(X) sort_TemporalInterval(Y) || equal(W,V)* pred___hasLastInstant__(Y,W)* pred___hasFirstInstant__(Y,X)* pred___hasLastInstant__(skc4,U)* pred___hasFirstInstant__(skc4,V)* -> pred___precedes__(Y,skc4)*.
+80[0:Res:2.0,44.1] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(X) sort_TemporalInterval(Y) || pred___precedes__(W,V)* pred___hasLastInstant__(Y,W)* pred___hasFirstInstant__(Y,X)* pred___hasLastInstant__(skc4,U)* pred___hasFirstInstant__(skc4,V) -> pred___precedes__(Y,skc4)*.
+45[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(X) sort_TemporalInterval(Y) sort_TemporalInterval(Z) || pred___hasFirstInstant__(Z,X)* pred___precedes__(W,V)* pred___hasLastInstant__(Y,U)* pred___hasFirstInstant__(Y,V)* pred___hasLastInstant__(Z,W)* -> pred___before__(Z,Y)*.
+42[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(X) sort_TemporalInterval(Y) sort_TemporalInterval(Z) || pred___hasFirstInstant__(Z,X)* equal(W,V)* pred___hasLastInstant__(Y,U)* pred___hasFirstInstant__(Y,V)* pred___hasLastInstant__(Z,W)* -> pred___meets__(Z,Y)*.
+43[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(X) sort_TemporalInterval(Y) sort_TemporalInterval(Z) || equal(W,V)* pred___hasLastInstant__(Y,U)* pred___hasFirstInstant__(Y,V)* pred___hasLastInstant__(Z,W)* pred___hasFirstInstant__(Z,X)* -> pred___precedes__(Z,Y)*.
+44[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(X) sort_TemporalInterval(Y) sort_TemporalInterval(Z) || pred___precedes__(W,V)* pred___hasLastInstant__(Y,U)* pred___hasFirstInstant__(Y,V)* pred___hasLastInstant__(Z,W)* pred___hasFirstInstant__(Z,X)* -> pred___precedes__(Z,Y)*.
+78[0:Res:2.0,46.1] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(X) sort_TemporalInterval(Y) || equal(W,U)* equal(X,V)* pred___hasLastInstant__(Y,W)* pred___hasFirstInstant__(Y,X)* pred___hasLastInstant__(skc4,U)* pred___hasFirstInstant__(skc4,V)* -> equal(Y,skc4).
+46[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInstant(W) sort_TemporalInstant(X) sort_TemporalInterval(Y) sort_TemporalInterval(Z) || equal(W,U)* equal(X,V)* pred___hasLastInstant__(Y,U)* pred___hasFirstInstant__(Y,V)* pred___hasLastInstant__(Z,W)* pred___hasFirstInstant__(Z,X)* -> equal(Z,Y)*.
+	Given clause: 4[0:Inp] ||  -> sort_TemporalInterval(skc7)*.
+	Given clause: 2[0:Inp] ||  -> sort_TemporalInterval(skc4)*.
+	Given clause: 1[0:Inp] ||  -> sort_TemporalInterval(skc5)*.
+	Given clause: 3[0:Inp] ||  -> sort_TemporalInstant(skc6)*.
+	Given clause: 5[0:Inp] ||  -> pred___precedes__(skc5,skc4)*.
+	Given clause: 77[0:Res:2.0,11.0] sort_TemporalInstant(skc4) ||  -> .
+	Given clause: 7[0:Inp] ||  -> sort_TemporalInstant(skf3(U))*.
+	Given clause: 6[0:Inp] ||  -> sort_TemporalInstant(skf2(U))*.
+	Given clause: 9[0:Inp] || pred___before__(skc5,skc4)* -> .
+	Given clause: 8[0:Inp] || pred___meets__(skc5,skc4)* -> .
+	Given clause: 74[0:Res:2.0,12.0] ||  -> pred___hasFirstInstant__(skc4,skf2(skc4))*.
+	Given clause: 75[0:Res:2.0,13.0] ||  -> pred___hasLastInstant__(skc4,skf3(skc4))*.
+	Given clause: 76[0:Res:2.0,14.0] || pred___precedes__(skc4,skc4)* -> .
+	Given clause: 11[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(U) ||  -> .
+	Given clause: 13[0:Inp] sort_TemporalInterval(U) ||  -> pred___hasLastInstant__(U,skf3(U))*.
+	Given clause: 12[0:Inp] sort_TemporalInterval(U) ||  -> pred___hasFirstInstant__(U,skf2(U))*.
+	Given clause: 14[0:Inp] sort_TemporalInterval(U) || pred___precedes__(U,U)* -> .
+	Given clause: 15[0:Inp] sort_TemporalInstant(U) || pred___precedes__(U,U)* -> .
+	Given clause: 60[0:Res:2.0,17.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___before__(skc4,V)*+ -> pred___hasFirstInstant__(skc4,U)*.
+	Given clause: 16[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) ||  -> equal(V,U) pred___precedes__(U,V)* pred___precedes__(V,U)*.
+	Given clause: 61[0:Res:2.0,18.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___before__(skc4,V)*+ -> pred___hasLastInstant__(skc4,U)*.
+	Given clause: 70[0:Res:2.0,29.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___meets__(skc4,V)*+ -> pred___hasFirstInstant__(skc4,U)*.
+	Given clause: 71[0:Res:2.0,30.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___meets__(skc4,V)*+ -> pred___hasLastInstant__(skc4,U)*.
+	Given clause: 66[0:Res:2.0,25.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___precedes__(skc4,V)*+ -> pred___hasFirstInstant__(skc4,U)*.
+	Given clause: 32[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___meets__(W,V)*+ -> pred___hasLastInstant__(V,U)*.
+	Given clause: 67[0:Res:2.0,26.0] sort_TemporalInstant(U) sort_TemporalInterval(V) || pred___precedes__(skc4,V)*+ -> pred___hasLastInstant__(skc4,U)*.
+	Given clause: 92[0:Res:2.0,23.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || equal(V,skc4)*+ -> pred___hasFirstInstant__(skc4,U)*.
+	Given clause: 115[0:SSi:114.1,2.0] sort_TemporalInstant(U) ||  -> pred___hasFirstInstant__(skc4,U)*.
+	Given clause: 128[0:MRR:117.2,115.1] sort_TemporalInstant(U) sort_TemporalInstant(V) ||  -> equal(V,U)*.
+	Given clause: 31[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___meets__(W,V)*+ -> pred___hasFirstInstant__(V,U)*.
+	Given clause: 135[0:EmS:128.0,3.0] sort_TemporalInstant(U) ||  -> equal(U,skc6)*.
+	Given clause: 139[0:Rew:136.0,74.0] ||  -> pred___hasFirstInstant__(skc4,skc6)*.
+	Given clause: 143[0:Rew:137.0,75.0] ||  -> pred___hasLastInstant__(skc4,skc6)*.
+	Given clause: 136[0:EmS:135.0,6.0] ||  -> equal(skf2(U),skc6)**.
+	Given clause: 141[0:Rew:136.0,12.1] sort_TemporalInterval(U) ||  -> pred___hasFirstInstant__(U,skc6)*.
+	Given clause: 137[0:EmS:135.0,7.0] ||  -> equal(skf3(U),skc6)**.
+	Given clause: 145[0:Rew:137.0,13.1] sort_TemporalInterval(U) ||  -> pred___hasLastInstant__(U,skc6)*.
+	Given clause: 93[0:Res:2.0,24.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || equal(V,skc4)*+ -> pred___hasLastInstant__(skc4,U)*.
+	Given clause: 150[0:SSi:149.1,2.0] sort_TemporalInstant(U) ||  -> pred___hasLastInstant__(skc4,U)*.
+	Given clause: 30[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || pred___meets__(W,V)*+ -> pred___hasLastInstant__(W,U)*.
+	Given clause: 151[0:MRR:116.2,150.1] sort_TemporalInstant(U) sort_TemporalInstant(V) ||  -> pred___precedes__(V,U)*.
+SPASS V 3.7 
+SPASS beiseite: Proof found.
+Problem: /tmp/./_precedes_cover1-546.tptp 
+SPASS derived 106 clauses, backtracked 0 clauses, performed 0 splits and kept 132 clauses.
+SPASS allocated 55509 KBytes.
+SPASS spent	0:00:00.03 on the problem.
+		0:00:00.01 for the input.
+		0:00:00.01 for the FLOTTER CNF translation.
+		0:00:00.00 for inferences.
+		0:00:00.00 for the backtracking.
+		0:00:00.00 for the reduction.
+
+
+Here is a proof with depth 2, length 18 :
+2[0:Inp] ||  -> sort_TemporalInterval(skc4)*.
+3[0:Inp] ||  -> sort_TemporalInstant(skc6)*.
+15[0:Inp] sort_TemporalInstant(U) || pred___precedes__(U,U)* -> .
+23[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || equal(W,V)* -> pred___hasFirstInstant__(V,U)*.
+24[0:Inp] sort_TemporalInstant(U) sort_TemporalInterval(V) sort_TemporalInterval(W) || equal(W,V)* -> pred___hasLastInstant__(V,U)*.
+40[0:Inp] sort_TemporalInstant(U) sort_TemporalInstant(V) sort_TemporalInterval(W) || pred___hasLastInstant__(W,U)* pred___hasFirstInstant__(W,V)* -> pred___precedes__(V,U)*.
+53[0:Res:2.0,40.0] sort_TemporalInstant(U) sort_TemporalInstant(V) || pred___hasLastInstant__(skc4,U) pred___hasFirstInstant__(skc4,V) -> pred___precedes__(V,U)*.
+92[0:Res:2.0,23.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || equal(V,skc4)*+ -> pred___hasFirstInstant__(skc4,U)*.
+93[0:Res:2.0,24.1] sort_TemporalInstant(U) sort_TemporalInterval(V) || equal(V,skc4)*+ -> pred___hasLastInstant__(skc4,U)*.
+114[0:EqR:92.2] sort_TemporalInstant(U) sort_TemporalInterval(skc4) ||  -> pred___hasFirstInstant__(skc4,U)*.
+115[0:SSi:114.1,2.0] sort_TemporalInstant(U) ||  -> pred___hasFirstInstant__(skc4,U)*.
+116[0:MRR:53.3,115.1] sort_TemporalInstant(U) sort_TemporalInstant(V) || pred___hasLastInstant__(skc4,U) -> pred___precedes__(V,U)*.
+149[0:EqR:93.2] sort_TemporalInstant(U) sort_TemporalInterval(skc4) ||  -> pred___hasLastInstant__(skc4,U)*.
+150[0:SSi:149.1,2.0] sort_TemporalInstant(U) ||  -> pred___hasLastInstant__(skc4,U)*.
+151[0:MRR:116.2,150.1] sort_TemporalInstant(U) sort_TemporalInstant(V) ||  -> pred___precedes__(V,U)*.
+172[0:Res:151.2,15.1] sort_TemporalInstant(U) sort_TemporalInstant(U) sort_TemporalInstant(U) ||  -> .
+175[0:Obv:172.1] sort_TemporalInstant(U) ||  -> .
+176[0:UnC:175.0,3.0] ||  -> .
+Formulae used in the proof : ax_precedes_cover sign_non_empty_sort_TemporalInstant ax_instant_irreflexive ax_same_interval ax_first_precedes_last
+
+--------------------------SPASS-STOP------------------------------

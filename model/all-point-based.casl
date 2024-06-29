@@ -38,8 +38,8 @@ forall x, y:TemporalInterval; xf,xl, yf, yl:TemporalInstant
 . (x hasFirstInstant xf) /\ (x hasLastInstant xl) => (xf precedes xl) %(first_precedes_last)%
 . (x hasFirstInstant xf) /\ (x hasFirstInstant yf) => (xf=yf) %(unique_first_instant)%
 . (x hasLastInstant xl) /\ (x hasLastInstant yl) => (xl=yl) %(unique_last_instant)%
-. (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (xf = yf) /\ (xl = yl) => (x = y) %(same_interval)%
-. (x precedes y) => (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ ((xl precedes yf) \/ (xl=yf)) %(def_precedes)%
+. (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ (xf = yf) /\ (xl = yl) <=> (x = y) %(same_interval)%
+. (x precedes y) <=> (x hasFirstInstant xf) /\ (x hasLastInstant xl) /\ (y hasFirstInstant yf) /\ (y hasLastInstant yl) /\ ((xl precedes yf) \/ (xl=yf)) %(def_precedes)%
 end 
 
 %% temporal interval meets
